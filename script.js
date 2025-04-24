@@ -80,8 +80,8 @@ const loader = new GLTFLoader();
 
 let clickable = false;
 
-//const vid = document.getElementById('vidA');
-//const videoTexture = new THREE.VideoTexture(vid);
+const vid = document.getElementById('vidA');
+const videoTexture = new THREE.VideoTexture(vid);
 
 const imga = document.getElementById('imga')
 const tex = new THREE.TextureLoader().load(imga.src);
@@ -149,11 +149,11 @@ const fall9 = document.getElementById("text9");
 fall9.style.display = "none";
 fall9.style.top = 0;
 
-// vid.addEventListener('loadeddata', () => {
-//     vid.play();
-//     videoTexture.needsUpdate = true;
-// });
-// vid.currentTime = 10;
+vid.addEventListener('loadeddata', () => {
+    vid.play();
+    videoTexture.needsUpdate = true;
+});
+vid.currentTime = 10;
 
 // //console.log(img)
 // console.log(vid)
