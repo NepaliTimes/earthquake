@@ -374,7 +374,7 @@ parentB.add(cubeB);
 scene.add(parentB);
 
 floaderb.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('story2', {
+	const geometry = new THREE.TextGeometry('The Earthquake from Above', {
 		font: nueue,
 		size: 0.05,
 		height: 0.001,
@@ -507,7 +507,7 @@ scene.add(parentG);
 
 
 floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
+	const geometry = new THREE.TextGeometry('Loss of Soul and Soil', {
 		font: nueue,
 		size: 0.05,
 		height: 0.001,
@@ -534,7 +534,7 @@ scene.add(parentH);
 
 
 floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
+	const geometry = new THREE.TextGeometry('Structural Problems', {
 		font: nueue,
 		size: 0.05,
 		height: 0.001,
@@ -561,7 +561,7 @@ scene.add(parentI);
 
 
 floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
+	const geometry = new THREE.TextGeometry('Yes, Quakes can be Forecast', {
 		font: nueue,
 		size: 0.05,
 		height: 0.001,
