@@ -24,7 +24,12 @@
             <source src="animationa.mp4" type="video/mp4">
         </video>
     </div>
-<body onclick="window.location.href='page1.html'">
-  Click anywhere to continue
+<body> 
+    <script>
+    function goToMainPage() {
+      localStorage.setItem('enteredViaWelcome', 'true');
+      window.location.href = 'page1.html';
+    }
+  </script>
 </body>
 </html>
