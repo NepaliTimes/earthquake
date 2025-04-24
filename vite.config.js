@@ -3,5 +3,5 @@
  */
 
  export default{
-	base: process.env.NODE_NEV === 'production' ? '/earthquake/' : ''
+	base: process.env.NODE_ENV === 'production' ? '/earthquake/' : '/'
  }
