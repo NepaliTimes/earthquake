@@ -9,20 +9,40 @@
       height: 100%;
       margin: 0;
       background-color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: white;
       font-family: sans-serif;
       font-size: 2em;
       cursor: pointer;
-      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
     }
 
     video {
-      max-width: 80%;
-      max-height: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
     }
+
+    /*#click-text {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+      top: 80%;
+    }*/
 
     #mobile-message {
       display: none;
@@ -40,13 +60,12 @@
     }
 
     @media (max-width: 600px) {
-      /* Hide video and text on mobile */
-      video, div#video, div {
+      video, #video {
         display: none;
       }
 
       #mobile-message {
-        display: block; /* Show the mobile message */
+        display: block;
       }
     }
   </style>
@@ -57,14 +76,14 @@
       <source src="animationa.mp4" type="video/mp4" />
     </video>
   </div>
-  <div>Click anywhere to continue</div>
+
+  <!-- <div id="click-text">Click anywhere to continue</div> -->
 
   <div id="mobile-message" class="mobile-message">
     Mobile experience still in development
   </div>
 
   <script>
-    // Prevent click event on mobile devices (max-width: 600px)
     if (window.innerWidth > 600) {
       document.getElementById('welcome-body').addEventListener('click', () => {
         localStorage.setItem('enteredViaWelcome', 'true');
