@@ -1,25 +1,3 @@
-if (window.location.pathname.endsWith('page1.html')) {
-  if (localStorage.getItem('enteredViaWelcome') !== 'true') {
-    window.location.href = 'index.html';
-  } else {
-    // Optional: reset access for next time
-    localStorage.removeItem('enteredViaWelcome');
-  }
-}
-
-// 👋 Welcome page logic
-if (
-  window.location.pathname.endsWith('index.html') ||
-  window.location.pathname === '/earthquake/' ||
-  window.location.pathname === '/earthquake'
-) {
-  document.body.addEventListener('click', () => {
-    localStorage.setItem('enteredViaWelcome', 'true');
-    window.location.href = 'page1.html';
-  });
-}
-
-
 import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
