@@ -74,9 +74,7 @@
   <div id="video">
    <video
   id="vidA"
-  controls
   muted
-  autoplay
   playsinline
   preload="auto"
   crossOrigin="anonymous"
@@ -98,22 +96,21 @@
     if (vid) {
       vid.muted = true;
       vid.playsInline = true;
-      vid.autoplay = true;
 
-      // Wait until metadata is loaded
-      vid.addEventListener('loadedmetadata', () => {
+      // Wait until video can play through
+      vid.addEventListener('canplaythrough', () => {
         const playPromise = vid.play();
 
         if (playPromise !== undefined) {
           playPromise
-            .then(() => {
-              console.log('Autoplay success');
-            })
-            .catch(error => {
-              console.warn('Autoplay failed:', error);
-            });
+            .then(() => console.log('Autoplay success'))
+            .catch(error => console.warn('Autoplay failed:', error));
         }
       });
+
+      vid.load(); // Begin loading manually
+    }
+
 
       vid.load();
     }
