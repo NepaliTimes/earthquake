@@ -40,8 +40,13 @@
     }
 
     @media (max-width: 600px) {
+      /* Hide video and text on mobile */
+      video, div#video, div {
+        display: none;
+      }
+
       #mobile-message {
-        display: block; /* Show the message when the screen is 600px or smaller */
+        display: block; /* Show the mobile message */
       }
     }
   </style>
