@@ -17,13 +17,7 @@
     }
 
     #video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      overflow: hidden;
+      all: unset;
     }
 
     video {
@@ -61,7 +55,7 @@
       z-index: 9999;
     }
 
-    /*@media (max-width: 600px) {
+    @media (max-width: 600px) {
       video, #video {
         display: none;
       }
@@ -69,7 +63,7 @@
       #mobile-message {
         display: block;
       }
-    }*/
+    }
   </style>
 </head>
 <body id="welcome-body">
