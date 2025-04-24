@@ -61,7 +61,7 @@ body {
 
 .section {
     width: 100%;
-    min-height: 1200vh;
+    min-height: 1300vh;
     position: relative;
     display: flex;
     justify-content: center;
