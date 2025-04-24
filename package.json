@@ -1,0 +1,28 @@
+{
+  "name": "earthquake",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies":{
+    "three": "^0.159.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NepaliTimes/earthquake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NepaliTimes/earthquake/issues"
+  },
+  "homepage": "https://github.com/NepaliTimes/earthquake#readme",
+  "description": ""
+}
