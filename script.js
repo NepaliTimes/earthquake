@@ -80,8 +80,8 @@ const loader = new GLTFLoader();
 
 let clickable = false;
 
-const vid = document.getElementById('vidA');
-const videoTexture = new THREE.VideoTexture(vid);
+//const vid = document.getElementById('vidA');
+//const videoTexture = new THREE.VideoTexture(vid);
 
 const imga = document.getElementById('imga')
 const tex = new THREE.TextureLoader().load(imga.src);
