@@ -365,7 +365,7 @@ floadera.load('/earthquake/fonts/nueue.json', (nueue) => {
 // cubeA.add(textMesh);
 
 
-const play2 = new readgeo();
+//const play2 = new readgeo();
 const cubeB = new cubes(-3.1, tex2);
 const parentB = new parents(2);
 
