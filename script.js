@@ -149,17 +149,17 @@ const fall9 = document.getElementById("text9");
 fall9.style.display = "none";
 fall9.style.top = 0;
 
-vid.addEventListener('loadeddata', () => {
-    vid.play();
-    videoTexture.needsUpdate = true;
-});
-vid.currentTime = 10;
+// vid.addEventListener('loadeddata', () => {
+//     vid.play();
+//     videoTexture.needsUpdate = true;
+// });
+// vid.currentTime = 10;
 
-//console.log(img)
-console.log(vid)
+// //console.log(img)
+// console.log(vid)
 
-console.log(tex)
-console.log(videoTexture);
+// console.log(tex)
+// console.log(videoTexture);
 
 
 
@@ -176,49 +176,49 @@ function parents(rotY) {
 	
 }
 
-function playgeo(){
-	// const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
+// function playgeo(){
+// 	// const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
 	
-	const geometry = new THREE.TorusGeometry( .7, 0.2, 16, 100 ); 
-	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
+// 	const geometry = new THREE.TorusGeometry( .7, 0.2, 16, 100 ); 
+// 	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
 
 
-	const play = new THREE.Mesh(geometry, material)
+// 	const play = new THREE.Mesh(geometry, material)
 
-	play.position.z = 0;
-	play.position.x = 4;
+// 	play.position.z = 0;
+// 	play.position.x = 4;
 
-	play.rotation.x = 100;
+// 	play.rotation.x = 100;
 
-	play.scale.x = 3;
-	play.scale.y = 0.2;
-	play.scale.z = 0.4;
+// 	play.scale.x = 3;
+// 	play.scale.y = 0.2;
+// 	play.scale.z = 0.4;
 
 
-	return play;
-}
+// 	return play;
+// }
 
-function readgeo(){
-	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
+// function readgeo(){
+// 	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
 	
-	// const geometry = new THREE.TorusGeometry( 1, 0.4, 12, Math.PI*2 ); 
-	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
+// 	// const geometry = new THREE.TorusGeometry( 1, 0.4, 12, Math.PI*2 ); 
+// 	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
 
 
-	const play = new THREE.Mesh(geometry, material)
+// 	const play = new THREE.Mesh(geometry, material)
 
-	play.position.z = 0;
-	play.position.x = 4;
+// 	play.position.z = 0;
+// 	play.position.x = 4;
 
-	play.rotation.x = Math.PI/2;
+// 	play.rotation.x = Math.PI/2;
 
-	play.scale.x = 0.1;
-	play.scale.y = 0.2;
-	play.scale.z = 0.4;
+// 	play.scale.x = 0.1;
+// 	play.scale.y = 0.2;
+// 	play.scale.z = 0.4;
 
 
-	return play;
-}
+// 	return play;
+// }
 
 function cubes(cposY, text){
 	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
