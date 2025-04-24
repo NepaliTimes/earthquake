@@ -84,23 +84,41 @@
   </div>
 
   <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const vid = document.getElementById('vidA');
 
+    if (vid) {
+      vid.muted = true;
+      vid.playsInline = true;
+      vid.autoplay = true;
+
+      // Wait until metadata is loaded
+      vid.addEventListener('loadedmetadata', () => {
+        const playPromise = vid.play();
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log('Autoplay success');
+            })
+            .catch(error => {
+              console.warn('Autoplay failed:', error);
+            });
+        }
+      });
+
+      vid.load();
+    }
+
+    // Desktop-only click
     if (window.innerWidth > 600) {
       document.getElementById('welcome-body').addEventListener('click', () => {
         localStorage.setItem('enteredViaWelcome', 'true');
         window.location.href = 'page1.html';
       });
     }
-    const vid = document.getElementById('vidA');
-  if (vid) {
-    vid.muted = true;
-    vid.playsInline = true;
-    vid.autoplay = true;
-    vid.load();
-    vid.play().catch(err => {
-      console.warn('Autoplay failed:', err);
-    });
-  }
-  </script>
+  });
+</script>
+
 </body>
 </html>
