@@ -17,26 +17,18 @@
     }
 
     #video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      overflow: hidden;
-    }
+  all: unset;
+}
+
 
     video {
-      background: red; /* Add this line */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 999; /* Make sure it's on top */
-    }
+        border: 5px solid lime;
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: block;
+  z-index: 9999;
+}
 
     /*#click-text {
       position: absolute;
@@ -61,7 +53,7 @@
       z-index: 9999;
     }
 
-    @media (max-width: 600px) {
+    /*@media (max-width: 600px) {
       video, #video {
         display: none;
       }
@@ -69,20 +61,15 @@
       #mobile-message {
         display: block;
       }
-    }
+    }*/
   </style>
 </head>
 <body id="welcome-body">
   <div id="video">
-   <video
-  id="vidA"
-  muted
-  playsinline
-  preload="auto"
-  crossOrigin="anonymous"
->
+   <video id="vidA" controls muted autoplay playsinline preload="auto" crossOrigin="anonymous">
   <source src="animationa.mp4" type="video/mp4" />
 </video>
+
   </div>
 
   <!-- <div id="click-text">Click anywhere to continue</div> -->
@@ -93,7 +80,7 @@
 
   <script>
 window.addEventListener('DOMContentLoaded', () => {
-    const vid = document.getElementById('video');
+    const vid = document.getElementById('vidA');
 
     if (vid) {
       vid.muted = true;
