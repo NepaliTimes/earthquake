@@ -518,7 +518,7 @@ floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh7.rotation.y = 1.65
 	textMesh7.position.x = 3
 	textMesh7.position.y = -0.65
-	textMesh7.position.z = 0.3
+	textMesh7.position.z = 0.27
 
 	textMesh7.scale.y = 0
 
