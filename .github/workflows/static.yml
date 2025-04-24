@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-node@v4
       - name: Install Dependencies
         run: npm install
-        working-directory: '.'
+        working-directory: ./
       - name: Build app
         run: npm run build
       - name: Setup Pages
