@@ -6,34 +6,33 @@
   <title>Continue</title>
   <style>
     html, body {
-      height: 100%;
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: sans-serif;
-      font-size: 2em;
-      cursor: pointer;
-      overflow: hidden;
-    }
-
-    #video {
-  position: relative;
-  width: auto;
-  height: 90vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   overflow: hidden;
+  background: black;
 }
 
-    video {
-      background: red; /* Add this line */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 999; /* Make sure it's on top */
-    }
+#video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+/*  z-index: -1; /* Optional, if you want to place content over the video */
+}
+
+video {
+  background: red; /* This will show if the video doesn't cover */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+}
 
     /*#click-text {
       position: absolute;
