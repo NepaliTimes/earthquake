@@ -318,7 +318,7 @@ const parentA = new parents(1);
 parentA.add(cubeA);
 scene.add(parentA);
 
-floadera.load('./fonts/nueue.json', (nueue) => {
+floadera.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('11:56 25 April 2015', {
 		font: nueue,
 		size: 0.05,
@@ -373,7 +373,7 @@ const parentB = new parents(2);
 parentB.add(cubeB);
 scene.add(parentB);
 
-floaderb.load('./fonts/nueue.json', (nueue) => {
+floaderb.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('story2', {
 		font: nueue,
 		size: 0.05,
@@ -399,7 +399,7 @@ const parentC = new parents(3);
 parentC.add(cubeC);
 scene.add(parentC);
 
-floaderc.load('./fonts/nueue.json', (nueue) => {
+floaderc.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('Langtang After 10 Years', {
 		font: nueue,
 		size: 0.05,
@@ -425,7 +425,7 @@ const parentD = new parents(4);
 parentD.add(cubeD);
 scene.add(parentD);
 
-floaderd.load('./fonts/nueue.json', (nueue) => {
+floaderd.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('Bhaktapur 2.0', {
 		font: nueue,
 		size: 0.05,
@@ -452,7 +452,7 @@ parentE.add(cubeE);
 scene.add(parentE);
 
 
-floadere.load('./fonts/nueue.json', (nueue) => {
+floadere.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('Bungamati Builds Back', {
 		font: nueue,
 		size: 0.05,
@@ -479,7 +479,7 @@ parentF.add(cubeF);
 scene.add(parentF);
 
 
-floaderf.load('./fonts/nueue.json', (nueue) => {
+floaderf.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
 		font: nueue,
 		size: 0.05,
@@ -506,7 +506,7 @@ parentG.add(cubeG);
 scene.add(parentG);
 
 
-floaderg.load('./fonts/nueue.json', (nueue) => {
+floaderg.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
 		font: nueue,
 		size: 0.05,
@@ -533,7 +533,7 @@ parentH.add(cubeH);
 scene.add(parentH);
 
 
-floaderh.load('./fonts/nueue.json', (nueue) => {
+floaderh.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
 		font: nueue,
 		size: 0.05,
@@ -560,7 +560,7 @@ parentI.add(cubeI);
 scene.add(parentI);
 
 
-floaderi.load('./fonts/nueue.json', (nueue) => {
+floaderi.load('/fonts/nueue.json', (nueue) => {
 	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
 		font: nueue,
 		size: 0.05,
@@ -643,7 +643,7 @@ function motionblur() {
 
 console.log(cubeList[bigbox]);
 
-loader.load('assetA.glb',
+loader.load('/assetA.glb',
 	function (gltf) {
 		bee = gltf.scene;
 		bee.position.x = initialPosition.x;
