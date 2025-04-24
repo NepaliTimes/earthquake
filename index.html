@@ -72,8 +72,8 @@
 </head>
 <body id="welcome-body">
   <div id="video">
-    <video id="vidA" crossOrigin="anonymous" muted autoplay playsinline>
-      <source src="animationa.mp4" type="video/mp4" />
+   <video id="vidA" crossOrigin="anonymous" muted autoplay playsinline preload="auto">
+        <source src="animationa.mp4" type="video/mp4" />
     </video>
   </div>
 
@@ -84,12 +84,23 @@
   </div>
 
   <script>
+
     if (window.innerWidth > 600) {
       document.getElementById('welcome-body').addEventListener('click', () => {
         localStorage.setItem('enteredViaWelcome', 'true');
         window.location.href = 'page1.html';
       });
     }
+    const vid = document.getElementById('vidA');
+  if (vid) {
+    vid.muted = true;
+    vid.playsInline = true;
+    vid.autoplay = true;
+    vid.load();
+    vid.play().catch(err => {
+      console.warn('Autoplay failed:', err);
+    });
+  }
   </script>
 </body>
 </html>
