@@ -310,7 +310,7 @@ const floaderi = new FontLoader();
 let textMesh9 = new THREE.Mesh();
 
 
-const play1 = new playgeo();
+//const play1 = new playgeo();
 const cubeA = new cubes(-2, tex);
 const parentA = new parents(1);
 
