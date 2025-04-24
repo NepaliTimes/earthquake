@@ -90,9 +90,8 @@
   </div>
 
   <script>
-     window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const vid = document.getElementById('vidA');
-}
 
     if (vid) {
       vid.muted = true;
@@ -112,13 +111,13 @@
       vid.load(); // Begin loading manually
     }
 
-    
     if (window.innerWidth > 600) {
       document.getElementById('welcome-body').addEventListener('click', () => {
         localStorage.setItem('enteredViaWelcome', 'true');
         window.location.href = 'page1.html';
       });
     }
+  });
   </script>
 </body>
 </html>
