@@ -23,6 +23,27 @@
       max-width: 80%;
       max-height: 60%;
     }
+
+    #mobile-message {
+      display: none;
+      position: fixed;
+      bottom: 10vh;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: whitesmoke;
+      padding: 20px;
+      font-size: 3vw;
+      font-family: sans-serif;
+      text-align: center;
+      z-index: 9999;
+    }
+
+    @media (max-width: 600px) {
+      #mobile-message {
+        display: block; /* Show the message when the screen is 600px or smaller */
+      }
+    }
   </style>
 </head>
 <body id="welcome-body">
@@ -33,11 +54,18 @@
   </div>
   <div>Click anywhere to continue</div>
 
+  <div id="mobile-message" class="mobile-message">
+    Mobile experience still in development
+  </div>
+
   <script>
-    document.getElementById('welcome-body').addEventListener('click', () => {
-      localStorage.setItem('enteredViaWelcome', 'true');
-      window.location.href = 'page1.html';
-    });
+    // Prevent click event on mobile devices (max-width: 600px)
+    if (window.innerWidth > 600) {
+      document.getElementById('welcome-body').addEventListener('click', () => {
+        localStorage.setItem('enteredViaWelcome', 'true');
+        window.location.href = 'page1.html';
+      });
+    }
   </script>
 </body>
 </html>
