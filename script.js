@@ -243,391 +243,420 @@ function cubes(cposY, text){
 }
 
 
-const floadera = new FontLoader();
-let textMesh1 = new THREE.Mesh();
+// const floadera = new FontLoader();
+// let textMesh1 = new THREE.Mesh();
 
-const floaderb = new FontLoader();
-let textMesh2 = new THREE.Mesh();
+// const floaderb = new FontLoader();
+// let textMesh2 = new THREE.Mesh();
 
-const floaderc = new FontLoader();
-let textMesh3 = new THREE.Mesh();
+// const floaderc = new FontLoader();
+// let textMesh3 = new THREE.Mesh();
 
-const floaderd = new FontLoader();
-let textMesh4 = new THREE.Mesh();
+// const floaderd = new FontLoader();
+// let textMesh4 = new THREE.Mesh();
 
-const floadere = new FontLoader();
-let textMesh5 = new THREE.Mesh();
+// const floadere = new FontLoader();
+// let textMesh5 = new THREE.Mesh();
 
-const floaderf = new FontLoader();
-let textMesh6 = new THREE.Mesh();
+// const floaderf = new FontLoader();
+// let textMesh6 = new THREE.Mesh();
 
-const floaderg = new FontLoader();
-let textMesh7 = new THREE.Mesh();
+// const floaderg = new FontLoader();
+// let textMesh7 = new THREE.Mesh();
 
-const floaderh = new FontLoader();
-let textMesh8 = new THREE.Mesh();
+// const floaderh = new FontLoader();
+// let textMesh8 = new THREE.Mesh();
 
-const floaderi = new FontLoader();
-let textMesh9 = new THREE.Mesh();
+// const floaderi = new FontLoader();
+// let textMesh9 = new THREE.Mesh();
 
-const floaderj = new FontLoader();
-let textMesh10 = new THREE.Mesh();
+// const floaderj = new FontLoader();
+// let textMesh10 = new THREE.Mesh();
 
-const floaderk = new FontLoader();
-let textMesh11 = new THREE.Mesh();
+// const floaderk = new FontLoader();
+// let textMesh11 = new THREE.Mesh();
 
 
-//const play1 = new playgeo();
-const cubeA = new cubes(-2, tex);
-const parentA = new parents(1);
+// // const cubeA = new cubes(-2, tex);
+// // const parentA = new parents(1);
 
-//cubeA.add(play1)
-parentA.add(cubeA);
-scene.add(parentA);
 
-floadera.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('11:56 25 April 2015', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh1.geometry = geometry
-	textMesh1.material = textMaterial
-	textMesh1.rotation.y = 1.65
-	textMesh1.position.x = 3
-	textMesh1.position.y = -0.65
-	textMesh1.position.z = 0.23
+// // parentA.add(cubeA);
+// // scene.add(parentA);
 
-	textMesh1.scale.y = 0
+// // floadera.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('11:56 25 April 2015', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh1.geometry = geometry
+// // 	textMesh1.material = textMaterial
+// // 	textMesh1.rotation.y = 1.65
+// // 	textMesh1.position.x = 3
+// // 	textMesh1.position.y = -0.65
+// // 	textMesh1.position.z = 0.23
 
-	cubeA.add(textMesh1);
+// // 	textMesh1.scale.y = 0
 
-	THREE.Cache.clear();
+// // 	cubeA.add(textMesh1);
 
+// // 	THREE.Cache.clear();
 
-} );
 
+// // } );
 
-// function readTextMesh() {
-// 	return new Promise((resolve, reject) => {
-// 		const floader = new FontLoader();
-// 		floader.load('./fonts/nueue.json', (nueue) => {
-// 			const geometry = new THREE.TextGeometry('Video1', {
-// 				font: nueue,
-// 				size: 0.1,
-// 				height: 0.001,
-// 			});
 
-// 			const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
-// 			const textMesh = new THREE.Mesh(geometry, material);
+// // const cubeB = new cubes(-3.1, tex2);
+// // const parentB = new parents(2);
 
-// 			textMesh.rotation.y = 1.65;
-// 			textMesh.position.set(2, -0.4, 0.4);
+// // parentB.add(cubeB);
+// // scene.add(parentB);
 
-// 			resolve(textMesh); // Return the mesh
-// 		}, undefined, reject);
-// 	});
-// }
+// // floaderb.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('The Earthquake from Above', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh2.geometry = geometry
+// // 	textMesh2.material = textMaterial
+// // 	textMesh2.rotation.y = 1.65
+// // 	textMesh2.position.x = 3
+// // 	textMesh2.position.y = -0.65
+// // 	textMesh2.position.z = 0.3
 
-//const textMesh = new readTextMesh();
+// // 	textMesh2.scale.y = 0
 
-// cubeA.add(textMesh);
+// // 	cubeB.add(textMesh2);
 
+// // 	THREE.Cache.clear();
 
-//const play2 = new readgeo();
-const cubeB = new cubes(-3.1, tex2);
-const parentB = new parents(2);
+// // } );
 
-//cubeB.add(play2);
-parentB.add(cubeB);
-scene.add(parentB);
+// // const cubeC = new cubes(-4.2, tex3);
+// // const parentC = new parents(3);
 
-floaderb.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('The Earthquake from Above', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh2.geometry = geometry
-	textMesh2.material = textMaterial
-	textMesh2.rotation.y = 1.65
-	textMesh2.position.x = 3
-	textMesh2.position.y = -0.65
-	textMesh2.position.z = 0.3
+// // parentC.add(cubeC);
+// // scene.add(parentC);
 
-	textMesh2.scale.y = 0
+// // floaderc.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Langtang After 10 Years', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh3.geometry = geometry
+// // 	textMesh3.material = textMaterial
+// // 	textMesh3.rotation.y = 1.65
+// // 	textMesh3.position.x = 3
+// // 	textMesh3.position.y = -0.65
+// // 	textMesh3.position.z = 0.3
 
-	cubeB.add(textMesh2);
+// // 	textMesh3.scale.y = 0
 
-	THREE.Cache.clear();
+// // 	cubeC.add(textMesh3);
 
-} );
-
-const cubeC = new cubes(-4.2, tex3);
-const parentC = new parents(3);
-
-parentC.add(cubeC);
-scene.add(parentC);
-
-floaderc.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Langtang After 10 Years', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh3.geometry = geometry
-	textMesh3.material = textMaterial
-	textMesh3.rotation.y = 1.65
-	textMesh3.position.x = 3
-	textMesh3.position.y = -0.65
-	textMesh3.position.z = 0.3
+// // 	THREE.Cache.clear();
 
-	textMesh3.scale.y = 0
+// // } );
 
-	cubeC.add(textMesh3);
+// // const cubeD = new cubes(-5.3, tex4);
+// // const parentD = new parents(4);
 
-	THREE.Cache.clear();
+// // parentD.add(cubeD);
+// // scene.add(parentD);
+
+// // floaderd.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Bhaktapur 2.0', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh4.geometry = geometry
+// // 	textMesh4.material = textMaterial
+// // 	textMesh4.rotation.y = 1.65
+// // 	textMesh4.position.x = 3
+// // 	textMesh4.position.y = -0.65
+// // 	textMesh4.position.z = 0.195
 
-} );
+// // 	textMesh4.scale.y = 0
 
-const cubeD = new cubes(-5.3, tex4);
-const parentD = new parents(4);
+// // 	cubeD.add(textMesh4);
 
-parentD.add(cubeD);
-scene.add(parentD);
-
-floaderd.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Bhaktapur 2.0', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh4.geometry = geometry
-	textMesh4.material = textMaterial
-	textMesh4.rotation.y = 1.65
-	textMesh4.position.x = 3
-	textMesh4.position.y = -0.65
-	textMesh4.position.z = 0.195
+// // 	THREE.Cache.clear();
 
-	textMesh4.scale.y = 0
+// // } );
 
-	cubeD.add(textMesh4);
+// // const cubeE = new cubes(-6.4, tex5);
+// // const parentE = new parents(5);
 
-	THREE.Cache.clear();
+// // parentE.add(cubeE);
+// // scene.add(parentE);
 
-} );
 
-const cubeE = new cubes(-6.4, tex5);
-const parentE = new parents(5);
+// // floadere.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Bungamati Builds Back', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh5.geometry = geometry
+// // 	textMesh5.material = textMaterial
+// // 	textMesh5.rotation.y = 1.65
+// // 	textMesh5.position.x = 3
+// // 	textMesh5.position.y = -0.65
+// // 	textMesh5.position.z = 0.28
 
-parentE.add(cubeE);
-scene.add(parentE);
+// // 	textMesh5.scale.y = 0
 
+// // 	cubeE.add(textMesh5);
 
-floadere.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Bungamati Builds Back', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh5.geometry = geometry
-	textMesh5.material = textMaterial
-	textMesh5.rotation.y = 1.65
-	textMesh5.position.x = 3
-	textMesh5.position.y = -0.65
-	textMesh5.position.z = 0.28
+// // 	THREE.Cache.clear();
 
-	textMesh5.scale.y = 0
+// // } );
 
-	cubeE.add(textMesh5);
+// // const cubeF = new cubes(-7.5, tex6);
+// // const parentF = new parents(6);
 
-	THREE.Cache.clear();
+// // parentF.add(cubeF);
+// // scene.add(parentF);
 
-} );
 
-const cubeF = new cubes(-7.5, tex6);
-const parentF = new parents(6);
+// // floaderf.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh6.geometry = geometry
+// // 	textMesh6.material = textMaterial
+// // 	textMesh6.rotation.y = 1.65
+// // 	textMesh6.position.x = 3
+// // 	textMesh6.position.y = -0.65
+// // 	textMesh6.position.z = 0.35
 
-parentF.add(cubeF);
-scene.add(parentF);
+// // 	textMesh6.scale.y = 0
 
+// // 	cubeF.add(textMesh6);
 
-floaderf.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('It Better Be Better Next Time', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh6.geometry = geometry
-	textMesh6.material = textMaterial
-	textMesh6.rotation.y = 1.65
-	textMesh6.position.x = 3
-	textMesh6.position.y = -0.65
-	textMesh6.position.z = 0.35
+// // 	THREE.Cache.clear();
 
-	textMesh6.scale.y = 0
+// // } );
 
-	cubeF.add(textMesh6);
+// // const cubeG = new cubes(-8.6, tex7);
+// // const parentG = new parents(7);
 
-	THREE.Cache.clear();
+// // parentG.add(cubeG);
+// // scene.add(parentG);
 
-} );
 
-const cubeG = new cubes(-8.6, tex7);
-const parentG = new parents(7);
+// // floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Loss of Soul and Soil', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh7.geometry = geometry
+// // 	textMesh7.material = textMaterial
+// // 	textMesh7.rotation.y = 1.65
+// // 	textMesh7.position.x = 3
+// // 	textMesh7.position.y = -0.65
+// // 	textMesh7.position.z = 0.27
 
-parentG.add(cubeG);
-scene.add(parentG);
+// // 	textMesh7.scale.y = 0
 
+// // 	cubeG.add(textMesh7);
 
-floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Loss of Soul and Soil', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh7.geometry = geometry
-	textMesh7.material = textMaterial
-	textMesh7.rotation.y = 1.65
-	textMesh7.position.x = 3
-	textMesh7.position.y = -0.65
-	textMesh7.position.z = 0.27
+// // 	THREE.Cache.clear();
 
-	textMesh7.scale.y = 0
+// // } );
 
-	cubeG.add(textMesh7);
+// // const cubeH = new cubes(-9.7, tex8);
+// // const parentH = new parents(8);
 
-	THREE.Cache.clear();
+// // parentH.add(cubeH);
+// // scene.add(parentH);
 
-} );
 
-const cubeH = new cubes(-9.7, tex8);
-const parentH = new parents(8);
+// // floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Structural Problems', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh8.geometry = geometry
+// // 	textMesh8.material = textMaterial
+// // 	textMesh8.rotation.y = 1.65
+// // 	textMesh8.position.x = 3
+// // 	textMesh8.position.y = -0.65
+// // 	textMesh8.position.z = 0.25
 
-parentH.add(cubeH);
-scene.add(parentH);
+// // 	textMesh8.scale.y = 0
 
+// // 	cubeH.add(textMesh8);
 
-floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Structural Problems', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh8.geometry = geometry
-	textMesh8.material = textMaterial
-	textMesh8.rotation.y = 1.65
-	textMesh8.position.x = 3
-	textMesh8.position.y = -0.65
-	textMesh8.position.z = 0.25
+// // 	THREE.Cache.clear();
 
-	textMesh8.scale.y = 0
+// // } );
 
-	cubeH.add(textMesh8);
+// // const cubeI = new cubes(-10.8, tex9);
+// // const parentI = new parents(9);
 
-	THREE.Cache.clear();
+// // parentI.add(cubeI);
+// // scene.add(parentI);
 
-} );
 
-const cubeI = new cubes(-10.8, tex9);
-const parentI = new parents(9);
+// // floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Yes, Quakes can be Forecast', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh9.geometry = geometry
+// // 	textMesh9.material = textMaterial
+// // 	textMesh9.rotation.y = 1.65
+// // 	textMesh9.position.x = 3
+// // 	textMesh9.position.y = -0.65
+// // 	textMesh9.position.z = 0.35
 
-parentI.add(cubeI);
-scene.add(parentI);
+// // 	textMesh9.scale.y = 0
 
+// // 	cubeI.add(textMesh9);
 
-floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Yes, Quakes can be Forecast', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh9.geometry = geometry
-	textMesh9.material = textMaterial
-	textMesh9.rotation.y = 1.65
-	textMesh9.position.x = 3
-	textMesh9.position.y = -0.65
-	textMesh9.position.z = 0.35
+// // 	THREE.Cache.clear();
 
-	textMesh9.scale.y = 0
+// // } );
 
-	cubeI.add(textMesh9);
+// // const cubeJ = new cubes(-11.9, tex10);
+// // const parentJ = new parents(10);
 
-	THREE.Cache.clear();
+// // parentJ.add(cubeJ);
+// // scene.add(parentJ);
 
-} );
-
-const cubeJ = new cubes(-11.9, tex10);
-const parentJ = new parents(10);
-
-parentJ.add(cubeJ);
-scene.add(parentJ);
-
-floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Editorial Journalism', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh10.geometry = geometry
-	textMesh10.material = textMaterial
-	textMesh10.rotation.y = 1.65
-	textMesh10.position.x = 3
-	textMesh10.position.y = -0.65
-	textMesh10.position.z = 0.35
-
-	textMesh10.scale.y = 0
-
-	cubeJ.add(textMesh10);
-
-	THREE.Cache.clear();
-
-} );
-
-
-const cubeK = new cubes(-13, tex11);
-const parentK = new parents(11);
-
-parentK.add(cubeK);
-scene.add(parentK);
-
-floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
-	const geometry = new THREE.TextGeometry('Towering Monument to 2015', {
-		font: nueue,
-		size: 0.05,
-		height: 0.001,
-	});
-	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
-	textMesh11.geometry = geometry
-	textMesh11.material = textMaterial
-	textMesh11.rotation.y = 1.65
-	textMesh11.position.x = 3
-	textMesh11.position.y = -0.65
-	textMesh11.position.z = 0.35
-
-	textMesh11.scale.y = 0
-
-	cubeK.add(textMesh11);
-
-	THREE.Cache.clear();
-
-} );
-
-const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI, parentJ, parentK]
-const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI, cubeJ, cubeK]
-const textList = [textMesh1, textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11];
-let bigbox = 0;
-//console.log(textMesh)
+// // floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Editorial Journalism', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh10.geometry = geometry
+// // 	textMesh10.material = textMaterial
+// // 	textMesh10.rotation.y = 1.65
+// // 	textMesh10.position.x = 3
+// // 	textMesh10.position.y = -0.65
+// // 	textMesh10.position.z = 0.35
+
+// // 	textMesh10.scale.y = 0
+
+// // 	cubeJ.add(textMesh10);
+
+// // 	THREE.Cache.clear();
+
+// // } );
+
+
+// // const cubeK = new cubes(-13, tex11);
+// // const parentK = new parents(11);
+
+// // parentK.add(cubeK);
+// // scene.add(parentK);
+
+// // floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
+// // 	const geometry = new THREE.TextGeometry('Towering Monument to 2015', {
+// // 		font: nueue,
+// // 		size: 0.05,
+// // 		height: 0.001,
+// // 	});
+// // 	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+// // 	textMesh11.geometry = geometry
+// // 	textMesh11.material = textMaterial
+// // 	textMesh11.rotation.y = 1.65
+// // 	textMesh11.position.x = 3
+// // 	textMesh11.position.y = -0.65
+// // 	textMesh11.position.z = 0.35
+
+// // 	textMesh11.scale.y = 0
+
+// // 	cubeK.add(textMesh11);
+
+// // 	THREE.Cache.clear();
+
+// // } );
+
+// const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI, parentJ, parentK]
+// const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI, cubeJ, cubeK]
+// const textList = [textMesh1 ,textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11]
+
+const floader = new THREE.FontLoader();
+const textList = [];
+const cubeList = [];
+const parentList = [];
+
+const titles = [
+	'11:56 25 April 2015',
+	'The Earthquake from Above',
+	'Langtang After 10 Years',
+	'Bhaktapur 2.0',
+	'Bungamati Builds Back',
+	'It Better Be Better Next Time',
+	'Loss of Soul and Soil',
+	'Structural Problems',
+	'Yes, Quakes can be Forecast',
+	'Editorial Journalism',
+	'Towering Monument to 2015'
+];
+
+const zPositions = [
+	0.23, 0.3, 0.3, 0.195, 0.28, 0.35, 0.27, 0.25, 0.35, 0.35, 0.35
+];
+
+const xPositions = [
+	-2, -3.1, -4.2, -5.3, -6.4, -7.5, -8.6, -9.7, -10.8, -11.9, -13
+];
+
+const textures = [
+	tex, tex2, tex3, tex4, tex5, tex6, tex7, tex8, tex9, tex10, tex11
+];
+
+floader.load('/earthquake/fonts/nueue.json', (font) => {
+	for (let i = 0; i < titles.length; i++) {
+		const cube = new cubes(xPositions[i], textures[i]);
+		const parent = new parents(i + 1);
+		parent.add(cube);
+		scene.add(parent);
+
+		cubesArray.push(cube);
+		parentsArray.push(parent);
+
+		const geometry = new THREE.TextGeometry(titles[i], {
+			font: font,
+			size: 0.05,
+			height: 0.001,
+		});
+		geometry.computeBoundingBox();
+		const textWidth = geometry.boundingBox.max.x - geometry.boundingBox.min.x;
+
+		const material = new THREE.MeshBasicMaterial({ color: 'black' });
+		const mesh = new THREE.Mesh(geometry, material);
+		mesh.rotation.y = 1.65;
+		mesh.position.set(3 - textWidth / 2, -0.65, zPositions[i]);
+		mesh.scale.y = 0;
+
+		cube.add(mesh);
+		textMeshes.push(mesh);
+	}
+});
 
 
 function motionblur() {
