@@ -875,9 +875,6 @@ const modelMove = () => {
     // Update last scroll position
     lastScrollPos = window.scrollY;
   }
-
-  // Request the next frame for smooth animation
-  requestAnimationFrame(modelMove);
 };
 	
 
