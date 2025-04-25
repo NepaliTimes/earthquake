@@ -639,6 +639,9 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 		cubeList.push(cube);
 		parentList.push(parent);
 
+		console.log('Cube:', cube)
+		console.log('parent:', parent)
+
 		const geometry = new THREE.TextGeometry(titles[i], {
 			font: font,
 			size: 0.05,
