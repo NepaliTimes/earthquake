@@ -1016,8 +1016,9 @@ document.addEventListener("click", () => {
 
 window.addEventListener('scroll', () => {
 	if (bee){
+		vid.paused = true;
 		currentParentPos = parentList[bigbox].rotation.y;
-		if(fall.style.display == 'none' && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' && fall10.style.display == 'none' && fall11.style.display == 'none' ){
+		if(vid.paused && fall.style.display == 'none' && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' && fall10.style.display == 'none' && fall11.style.display == 'none' ){
 			console.log('modelabouttomove')
 			modelMove();
 		}
