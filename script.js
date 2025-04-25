@@ -765,6 +765,8 @@ const pmaterial = new THREE.PointsMaterial({
 
 const prtclMesh = new THREE.Points(particlesGeometry, pmaterial)
 
+
+console.log(parentList[0])
 parentList[0].add(prtclMesh)
 
 const clock = new THREE.Clock();
