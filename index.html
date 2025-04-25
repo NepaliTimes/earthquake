@@ -82,26 +82,33 @@ video {
 
   <script>
 window.addEventListener('DOMContentLoaded', () => {
-    const vid = document.getElementById('vidA');
+  const vid = document.getElementById('vidA');
+  const body = document.getElementById('welcome-body');
+  let canClick = false;
+  const unlockTime = 35; // seconds
 
-    if (vid) {
-      vid.muted = true;
-      vid.playsInline = true;
+  if (vid) {
+    vid.muted = true;
+    vid.playsInline = true;
 
-      // Wait until video can play through
-      vid.addEventListener('canplaythrough', () => {
-        const playPromise = vid.play();
+    vid.addEventListener('canplaythrough', () => {
+      const playPromise = vid.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => console.log('Autoplay success'))
+          .catch(error => console.warn('Autoplay failed:', error));
+      }
+    });
 
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => console.log('Autoplay success'))
-            .catch(error => console.warn('Autoplay failed:', error));
-        }
-      });
+    vid.addEventListener('timeupdate', () => {
+      if (!canClick && vid.currentTime >= unlockTime) {
+        canClick = true;
+        console.log('Click enabled');
+      }
+    });
 
-      vid.load(); // Begin loading manually
-    }
-
+    vid.load();
+  }
     if (window.innerWidth > 600) {
       document.getElementById('welcome-body').addEventListener('click', () => {
         localStorage.setItem('enteredViaWelcome', 'true');
