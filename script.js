@@ -608,7 +608,7 @@ let bigbox = 0;
 
 
 function motionblur() {
-	for (var i = 0; i < 9; i++) {
+	for (var i = 0; i < 11; i++) {
 		if ((4.125 <= parentList[i].rotation.y && parentList[i].rotation.y <= 5.5)) {
 			bigbox = i;
 			if (vid.paused && fall.style.display == "none" && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' && fall10.style.display == 'none' && fall11.style.display == 'none') {
@@ -736,47 +736,47 @@ const modelMove = () => {
 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
 	bee.position.z = initialPosition.z +  4 * scrollPosY;
 
-	parentA.rotation.y = -1.2 + 30*scrollPosY;
+	parentA.rotation.y = -1.2 + 32*scrollPosY;
 	parentA.position.z = initialpz +  4 * scrollPosY;
 	cubeA.position.y = cubeinity  + 9*scrollPosY;
 
-	parentB.rotation.y = -3.4 + 30*scrollPosY;
+	parentB.rotation.y = -3.4 + 32*scrollPosY;
 	parentB.position.z = initialpz +  4 * scrollPosY;
 	cubeB.position.y = cubeinity - 0.65 + 9*scrollPosY;
 
-	parentC.rotation.y = -5.6 + 30*scrollPosY;
+	parentC.rotation.y = -5.6 + 32*scrollPosY;
 	parentC.position.z = initialpz +  4 * scrollPosY;
 	cubeC.position.y = cubeinity - 1.3 + 9*scrollPosY;
 
-	parentD.rotation.y = -7.8 + 30*scrollPosY;
+	parentD.rotation.y = -7.8 + 32*scrollPosY;
 	parentD.position.z = initialpz +  4 * scrollPosY;
 	cubeD.position.y = cubeinity - 1.3-0.65 + 9*scrollPosY;
 
-	parentE.rotation.y = -10 + 30*scrollPosY;
+	parentE.rotation.y = -10 + 32*scrollPosY;
 	parentE.position.z = initialpz +  4 * scrollPosY;
 	cubeE.position.y = cubeinity - 2.6 + 9*scrollPosY;
 
-	parentF.rotation.y = -12.2 + 30*scrollPosY;
+	parentF.rotation.y = -12.2 + 32*scrollPosY;
 	parentF.position.z = initialpz +  4 * scrollPosY;
 	cubeF.position.y = cubeinity - 2.6-0.65 + 9*scrollPosY;
 
-	parentG.rotation.y = -14.4 + 30*scrollPosY;
+	parentG.rotation.y = -14.4 + 32*scrollPosY;
 	parentG.position.z = initialpz +  4 * scrollPosY;
 	cubeG.position.y = cubeinity - 3.9 + 9*scrollPosY;
 
-	parentH.rotation.y = -16.6 + 30*scrollPosY;
+	parentH.rotation.y = -16.6 + 32*scrollPosY;
 	parentH.position.z = initialpz +  4 * scrollPosY;
 	cubeH.position.y = cubeinity - 3.9 -0.65 + 9*scrollPosY;
 
-	parentI.rotation.y = -18.8 + 30*scrollPosY;
+	parentI.rotation.y = -18.8 + 32*scrollPosY;
 	parentI.position.z = initialpz +  4 * scrollPosY;
 	cubeI.position.y = cubeinity - 3.9 -0.65 -0.65 + 9*scrollPosY;
 
-	parentJ.rotation.y = -21 + 30*scrollPosY;
+	parentJ.rotation.y = -21 + 32*scrollPosY;
 	parentJ.position.z = initialpz +  4 * scrollPosY;
 	cubeJ.position.y = cubeinity - 3.9 -1.3 - 0.65 + 9*scrollPosY;
 
-	parentK.rotation.y = -23.2 + 30*scrollPosY;
+	parentK.rotation.y = -23.2 + 32*scrollPosY;
 	parentK.position.z = initialpz +  4 * scrollPosY;
 	cubeK.position.y = cubeinity - 3.9 - 2.6 + 9*scrollPosY;
 
