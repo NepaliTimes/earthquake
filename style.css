@@ -648,40 +648,31 @@ header .content-fit nav ul{
 
 @media (max-width: 600px) {
   .section .topic {
-    font-size: 8vh;
-    padding: 10px;
-    text-align: center;
+    display: none;
   }
 
   #ending {
-    left: 5vw;
-    width: 90%;
-    font-size: 3vw;
-    text-align: left;
-    padding: 10px;
+    display: none;
   }
 
   #text {
-      top: 75vh;
-      bottom: unset;
-      left: 5vw;
-      margin: 10px;
-      width: 90vw;
-      height: 25vh;
-      font-size: 3vw;
+      display: none;
   }
 
   #Fall {
-    font-size: 3vw;
+   display: none;
   }
 
   body {
-    font-size: 14px;
+    display: none;
   }
 
-  /*#container3d {
-    transform: scale(0.8);
-    transition: transform 0.5s ease;
-    transform-origin: center;
-  }*/
+  #container3d {
+    display: none;
+    z-index: -2;
+  }
+
+  #mobile-message{
+    display: block;
+  }
 }
