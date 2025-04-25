@@ -660,8 +660,8 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 			cubeList.push(cube);
 			parentList.push(parent);
 
-			if (parentsArray.length > 0 && parentsArray[0]) {
-				parentsArray[0].add(prtclMesh);
+			if (parentList.length > 0 && parentList[0]) {
+				parentList[0].add(prtclMesh);
 			}
 
 			console.log('Cube:', cube)
