@@ -574,7 +574,7 @@ floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
 } );
 
 
-const cubeK = new cubes(-11.4, tex11);
+const cubeK = new cubes(-13, tex11);
 const parentK = new parents(11);
 
 parentK.add(cubeK);
