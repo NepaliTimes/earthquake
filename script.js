@@ -766,7 +766,7 @@ const keylight = new THREE.DirectionalLight(0xFFB6C1, 3);
 keylight.position.set(0, 200, 0);
 scene.add(keylight);
 
-const controls = new OrbitControls(camera, renderer.domElement);
+//const controls = new OrbitControls(camera, renderer.domElement);
 
 const clock = new THREE.Clock();
 
@@ -791,8 +791,8 @@ window.addEventListener('resize', () => {
 });
 
 
-const modelMove = () => {
-	scrollPosY = (window.scrollY/document.body.clientHeight);
+const modelMove = _.debounce(() => {
+  scrollPosY = (window.scrollY/document.body.clientHeight);
 	bee.rotation.y = initialRotation.y + -1.8 * Math.PI * scrollPosY;
 	bee.rotation.x = initialRotation.x + (-0.5* scrollPosY);
 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
@@ -844,7 +844,9 @@ const modelMove = () => {
 
 
 	motionblur();
-}
+}, 100); 
+	
+
 
 let scrollTop = 0;
 let scrollLeft = 0;
