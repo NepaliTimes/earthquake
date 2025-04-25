@@ -597,6 +597,25 @@ function cubes(cposY, text){
 // const parentList = [parentList[0], parentList[1], parentList[2], parentList[3], parentList[4], parentList[5], parentList[6], parentList[7], parentList[8], parentList[9], parentList[10]]
 // const cubeList = [cubeList[0], cubeList[1], cubeList[2], cubeList[3], cubeList[4], cubeList[5], cubeList[6], cubeList[7], cubeI, cubeJ, cubeK]
 // const textList = [textMesh1 ,textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11]
+const particlesGeometry = new THREE.BufferGeometry();
+const prtcls = 5000;
+const posArray = new Float32Array(prtcls * 3);
+
+for (let i = 0; i < prtcls * 3; i++) {
+	posArray[i] = (Math.random() - 0.5) * (Math.random() * 5);
+}
+
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+const pmaterial = new THREE.PointsMaterial({
+	size: 0.005,
+	color: 'gray',
+	transparent: true,
+	blending: THREE.AdditiveBlending,
+});
+
+const prtclMesh = new THREE.Points(particlesGeometry, pmaterial);
+
 
 const floader = new THREE.FontLoader();
 const textList = [];
@@ -640,6 +659,10 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 
 			cubeList.push(cube);
 			parentList.push(parent);
+
+			if (parentsArray.length > 0 && parentsArray[0]) {
+				parentsArray[0].add(prtclMesh);
+			}
 
 			console.log('Cube:', cube)
 			console.log('parent:', parent)
@@ -745,29 +768,29 @@ scene.add(keylight);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-const particlesGeometry = new THREE.BufferGeometry;
-const prtcls = 5000;
+// const particlesGeometry = new THREE.BufferGeometry;
+// const prtcls = 5000;
 
-const posArray = new Float32Array(prtcls*3);
+// const posArray = new Float32Array(prtcls*3);
 
-for (let i = 0; i < prtcls*3; i++) {
-	posArray[i] = (Math.random() - 0.5)* (Math.random() *5)
-}
+// for (let i = 0; i < prtcls*3; i++) {
+// 	posArray[i] = (Math.random() - 0.5)* (Math.random() *5)
+// }
 
-particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
+// particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
 
-const pmaterial = new THREE.PointsMaterial({
-	size: 0.005,
-	color: 'gray',
-	transparent: true,
-	blending: THREE.AdditiveBlending
-})
+// const pmaterial = new THREE.PointsMaterial({
+// 	size: 0.005,
+// 	color: 'gray',
+// 	transparent: true,
+// 	blending: THREE.AdditiveBlending
+// })
 
-const prtclMesh = new THREE.Points(particlesGeometry, pmaterial)
+// const prtclMesh = new THREE.Points(particlesGeometry, pmaterial)
 
 
-console.log(parentList[0])
-parentList[0].add(prtclMesh)
+// console.log(parentList[0])
+// parentList[0].add(prtclMesh)
 
 const clock = new THREE.Clock();
 
