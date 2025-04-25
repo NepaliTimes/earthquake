@@ -303,6 +303,8 @@ floadera.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeA.add(textMesh1);
 
+	THREE.Cache.clear();
+
 } );
 
 
@@ -358,6 +360,8 @@ floaderb.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeB.add(textMesh2);
 
+	THREE.Cache.clear();
+
 } );
 
 const cubeC = new cubes(-4.2, tex3);
@@ -384,6 +388,8 @@ floaderc.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeC.add(textMesh3);
 
+	THREE.Cache.clear();
+
 } );
 
 const cubeD = new cubes(-5.3, tex4);
@@ -409,6 +415,8 @@ floaderd.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh4.scale.y = 0
 
 	cubeD.add(textMesh4);
+
+	THREE.Cache.clear();
 
 } );
 
@@ -437,6 +445,8 @@ floadere.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeE.add(textMesh5);
 
+	THREE.Cache.clear();
+
 } );
 
 const cubeF = new cubes(-7.5, tex6);
@@ -463,6 +473,8 @@ floaderf.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh6.scale.y = 0
 
 	cubeF.add(textMesh6);
+
+	THREE.Cache.clear();
 
 } );
 
@@ -491,6 +503,8 @@ floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeG.add(textMesh7);
 
+	THREE.Cache.clear();
+
 } );
 
 const cubeH = new cubes(-9.7, tex8);
@@ -517,6 +531,8 @@ floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh8.scale.y = 0
 
 	cubeH.add(textMesh8);
+
+	THREE.Cache.clear();
 
 } );
 
@@ -545,6 +561,8 @@ floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	cubeI.add(textMesh9);
 
+	THREE.Cache.clear();
+
 } );
 
 const cubeJ = new cubes(-11.9, tex10);
@@ -570,6 +588,8 @@ floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh10.scale.y = 0
 
 	cubeJ.add(textMesh10);
+
+	THREE.Cache.clear();
 
 } );
 
@@ -597,6 +617,8 @@ floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
 	textMesh11.scale.y = 0
 
 	cubeK.add(textMesh11);
+
+	THREE.Cache.clear();
 
 } );
 
