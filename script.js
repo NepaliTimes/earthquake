@@ -636,8 +636,8 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 		parent.add(cube);
 		scene.add(parent);
 
-		cubesArray.push(cube);
-		parentsArray.push(parent);
+		cubeList.push(cube);
+		parentList.push(parent);
 
 		const geometry = new THREE.TextGeometry(titles[i], {
 			font: font,
@@ -654,10 +654,11 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 		mesh.scale.y = 0;
 
 		cube.add(mesh);
-		textMeshes.push(mesh);
+		textList.push(mesh);
 	}
 });
 
+const bigbox = 0;
 
 function motionblur() {
 	for (var i = 0; i < 11; i++) {
