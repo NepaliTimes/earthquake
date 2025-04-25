@@ -598,7 +598,7 @@ function cubes(cposY, text){
 // const cubeList = [cubeList[0], cubeList[1], cubeList[2], cubeList[3], cubeList[4], cubeList[5], cubeList[6], cubeList[7], cubeI, cubeJ, cubeK]
 // const textList = [textMesh1 ,textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11]
 const particlesGeometry = new THREE.BufferGeometry();
-const prtcls = 5000;
+const prtcls = 1000;
 const posArray = new Float32Array(prtcls * 3);
 
 for (let i = 0; i < prtcls * 3; i++) {
