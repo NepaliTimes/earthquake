@@ -84,31 +84,50 @@ const vid = document.getElementById('vidA');
 const videoTexture = new THREE.VideoTexture(vid);
 
 const imga = document.getElementById('imga')
-const tex = new THREE.TextureLoader().load(imga.src);
+const tex = new THREE.TextureLoader().load(imga.src, () =>{
+	THREE.Cache.clear();
+});
+
 
 const imgb = document.getElementById('imgb')
-const tex2 = new THREE.TextureLoader().load(imgb.src);
+const tex2 = new THREE.TextureLoader().load(imgb.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgc = document.getElementById('imgc')
-const tex3 = new THREE.TextureLoader().load(imgc.src);
+const tex3 = new THREE.TextureLoader().load(imgc.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgd = document.getElementById('imgd')
-const tex4 = new THREE.TextureLoader().load(imgd.src);
+const tex4 = new THREE.TextureLoader().load(imgd.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imge = document.getElementById('imge')
-const tex5 = new THREE.TextureLoader().load(imge.src);
+const tex5 = new THREE.TextureLoader().load(imge.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgf = document.getElementById('imgf')
-const tex6 = new THREE.TextureLoader().load(imgf.src);
+const tex6 = new THREE.TextureLoader().load(imgf.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgg = document.getElementById('imgg')
-const tex7 = new THREE.TextureLoader().load(imgg.src);
+const tex7 = new THREE.TextureLoader().load(imgg.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgh = document.getElementById('imgh')
-const tex8 = new THREE.TextureLoader().load(imgh.src);
+const tex8 = new THREE.TextureLoader().load(imgh.src, () =>{
+	THREE.Cache.clear();
+});
 
 const imgi = document.getElementById('imgi')
-const tex9 = new THREE.TextureLoader().load(imgi.src);
+const tex9 = new THREE.TextureLoader().load(imgi.src, () =>{
+	THREE.Cache.clear();
+});
 
 
 const fall = document.getElementById("text");
@@ -155,14 +174,6 @@ vid.addEventListener('loadeddata', () => {
 });
 vid.currentTime = 10;
 
-// //console.log(img)
-// console.log(vid)
-
-// console.log(tex)
-// console.log(videoTexture);
-
-
-
 
 function parents(rotY) {
 	const parent = new THREE.Object3D();
@@ -176,49 +187,6 @@ function parents(rotY) {
 	
 }
 
-// function playgeo(){
-// 	// const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
-	
-// 	const geometry = new THREE.TorusGeometry( .7, 0.2, 16, 100 ); 
-// 	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
-
-
-// 	const play = new THREE.Mesh(geometry, material)
-
-// 	play.position.z = 0;
-// 	play.position.x = 4;
-
-// 	play.rotation.x = 100;
-
-// 	play.scale.x = 3;
-// 	play.scale.y = 0.2;
-// 	play.scale.z = 0.4;
-
-
-// 	return play;
-// }
-
-// function readgeo(){
-// 	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
-	
-// 	// const geometry = new THREE.TorusGeometry( 1, 0.4, 12, Math.PI*2 ); 
-// 	const material = new THREE.MeshBasicMaterial( { color: 0xffffff } ); 
-
-
-// 	const play = new THREE.Mesh(geometry, material)
-
-// 	play.position.z = 0;
-// 	play.position.x = 4;
-
-// 	play.rotation.x = Math.PI/2;
-
-// 	play.scale.x = 0.1;
-// 	play.scale.y = 0.2;
-// 	play.scale.z = 0.4;
-
-
-// 	return play;
-// }
 
 function cubes(cposY, text){
 	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
@@ -257,30 +225,6 @@ function cubes(cposY, text){
 	return cube;
 }
 
-// function cubest(cposY, vidtext){
-// 	const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
-
-// 	const material = new THREE.MeshBasicMaterial( {map: vidtext, side: THREE.FrontSide, toneMapped: false,} ); 
-
-
-// 	console.log(material)
-
-
-// 	const cube = new THREE.Mesh(geometry, material); 
-
-// 	console.log(cube);
-
-// 	cube.position.x = 2;
-// 	cube.position.y = cposY;
-
-// 	cube.scale.x = 0.001;
-// 	cube.scale.y = 0.2;
-// 	cube.scale.z = 0.4;
-
-
-
-// 	return cube;
-// }
 
 const floadera = new FontLoader();
 let textMesh1 = new THREE.Mesh();
@@ -580,23 +524,6 @@ floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 } );
 
-// const cubeF = new cubes(-7, 0x778899);
-// const parentF = new parents(6);
-
-// parentF.add(cubeF);
-// scene.add(parentF);
-
-// const cubeG = new cubes(-8, 0x778899);
-// const parentG = new parents(7);
-
-// parentG.add(cubeG);
-// scene.add(parentG);
-
-// const cubeH = new cubes(-9, 0x778899);
-// const parentH = new parents(8);
-
-// parentH.add(cubeH);
-// scene.add(parentH);
 
 const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI]
 const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI]
@@ -656,6 +583,7 @@ loader.load('/earthquake/assetA.glb',
 		bee.scale.z = 0.05;
 
 		scene.add(bee);
+		THREE.Cache.clear();
 
 	},
 	function (xhr) {},
@@ -666,7 +594,6 @@ const renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 const obj = document.getElementById('container3d').appendChild(renderer.domElement);
 
-// bee.geometry.center();
 
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 4);
@@ -708,7 +635,6 @@ const clock = new THREE.Clock();
 
 const reRender3d = () => {
 	requestAnimationFrame(reRender3d);
-	//controls.update();
 	const elapsedtime = clock.getElapsedTime();
 	prtclMesh.rotation.y = -.1 *elapsedtime;
 	prtclMesh.rotation.x = -.1 *elapsedtime
@@ -773,13 +699,6 @@ const modelMove = () => {
 
 
 	motionblur();
-	console.log(window.scrollY);
-	console.log(document.documentElement.scrollHeight-900);
-	console.log(clickable)
-	console.log(window.innerWidth)
-	//console.log(fall.style.top);
-	//console.log(fall.style.display);
-
 }
 
 let scrollTop = 0;
@@ -815,14 +734,12 @@ document.addEventListener("click", () => {
 		        vid.play().catch(err => console.error("Video play error:", err));
 		        gsap.to(parentList[bigbox].rotation, {y: 4.7, duration: 0.5});
 		        disableScroll(); 
-		        // body.style.background = "gray";
 
 		    } else {
 		    	vid.pause();
 		    	vid.currentTime = 10;
 		    	gsap.to(parentA.rotation, {y: currentParentPos, duration: 0.5});
 		    	enableScroll();
-		    	// body.style.background = "300deg;blue;lightskyblue;whitesmoke";
 		    }
 
 		} else {
@@ -897,7 +814,6 @@ document.addEventListener("click", () => {
 			}
 		}
 	}
-	//console.log(body.style.background)
 	motionblur();  
 });
 
