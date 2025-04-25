@@ -731,39 +731,30 @@ function motionblur() {
 console.log(cubeList[bigbox]);
 
 loader.load('/earthquake/assetA.glb',
-  function (gltf) {
-    // The model has been fully loaded
-    bee = gltf.scene;  // 'bee' is now the loaded 3D object
+	function (gltf) {
+		bee = gltf.scene;
+		bee.position.x = initialPosition.x;
+		bee.position.z = initialPosition.z;
+		bee.position.y = initialPosition.y;
+		bee.rotation.y = initialRotation.y;
+		bee.rotation.x = initialRotation.x;
+		bee.scale.y = 0.04;
+		bee.scale.x = 0.04;
+		bee.scale.z = 0.04;
 
-    // Set the initial position and rotation
-    bee.position.set(initialPosition.x, initialPosition.y, initialPosition.z);
-    bee.rotation.set(initialRotation.x, initialRotation.y, initialRotation.z);
+		scene.add(bee);
+		THREE.Cache.clear();
 
-    // Set the scale of the model
-    bee.scale.set(0.04, 0.04, 0.04);
-
-    // Add the model to the scene
-    scene.add(bee);
-
-    // Now the model is fully loaded, you can safely apply further operations like rotation
-    console.log("Model loaded and initial rotation applied!");
-
-    // Clear any cache if needed
-    THREE.Cache.clear();
-  },
-  function (xhr) {
-    // Optional: Progress callback (can show loading bar)
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-  },
-  function (err) {
-    // Optional: Error callback
-    console.error('An error occurred while loading the model', err);
-  }
-);
+	},
+	function (xhr) {},
+	function (err) {}
+	);
 
 const renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 const obj = document.getElementById('container3d').appendChild(renderer.domElement);
+
+
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 4);
 scene.add(ambientLight);
