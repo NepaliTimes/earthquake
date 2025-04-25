@@ -736,47 +736,47 @@ const modelMove = () => {
 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
 	bee.position.z = initialPosition.z +  4 * scrollPosY;
 
-	parentA.rotation.y = -1.2 + 28*scrollPosY;
+	parentA.rotation.y = -1.2 + 30*scrollPosY;
 	parentA.position.z = initialpz +  4 * scrollPosY;
 	cubeA.position.y = cubeinity  + 9*scrollPosY;
 
-	parentB.rotation.y = -3.4 + 28*scrollPosY;
+	parentB.rotation.y = -3.4 + 30*scrollPosY;
 	parentB.position.z = initialpz +  4 * scrollPosY;
 	cubeB.position.y = cubeinity - 0.65 + 9*scrollPosY;
 
-	parentC.rotation.y = -5.6 + 28*scrollPosY;
+	parentC.rotation.y = -5.6 + 30*scrollPosY;
 	parentC.position.z = initialpz +  4 * scrollPosY;
 	cubeC.position.y = cubeinity - 1.3 + 9*scrollPosY;
 
-	parentD.rotation.y = -7.8 + 28*scrollPosY;
+	parentD.rotation.y = -7.8 + 30*scrollPosY;
 	parentD.position.z = initialpz +  4 * scrollPosY;
 	cubeD.position.y = cubeinity - 1.3-0.65 + 9*scrollPosY;
 
-	parentE.rotation.y = -10 + 28*scrollPosY;
+	parentE.rotation.y = -10 + 30*scrollPosY;
 	parentE.position.z = initialpz +  4 * scrollPosY;
 	cubeE.position.y = cubeinity - 2.6 + 9*scrollPosY;
 
-	parentF.rotation.y = -12.2 + 28*scrollPosY;
+	parentF.rotation.y = -12.2 + 30*scrollPosY;
 	parentF.position.z = initialpz +  4 * scrollPosY;
 	cubeF.position.y = cubeinity - 2.6-0.65 + 9*scrollPosY;
 
-	parentG.rotation.y = -14.4 + 28*scrollPosY;
+	parentG.rotation.y = -14.4 + 30*scrollPosY;
 	parentG.position.z = initialpz +  4 * scrollPosY;
 	cubeG.position.y = cubeinity - 3.9 + 9*scrollPosY;
 
-	parentH.rotation.y = -16.6 + 28*scrollPosY;
+	parentH.rotation.y = -16.6 + 30*scrollPosY;
 	parentH.position.z = initialpz +  4 * scrollPosY;
 	cubeH.position.y = cubeinity - 3.9 -0.65 + 9*scrollPosY;
 
-	parentI.rotation.y = -18.8 + 28*scrollPosY;
+	parentI.rotation.y = -18.8 + 30*scrollPosY;
 	parentI.position.z = initialpz +  4 * scrollPosY;
 	cubeI.position.y = cubeinity - 3.9 -0.65 -0.65 + 9*scrollPosY;
 
-	parentJ.rotation.y = -21 + 28*scrollPosY;
+	parentJ.rotation.y = -21 + 30*scrollPosY;
 	parentJ.position.z = initialpz +  4 * scrollPosY;
 	cubeJ.position.y = cubeinity - 3.9 -1.3 - 0.65 + 9*scrollPosY;
 
-	parentK.rotation.y = -23.2 + 28*scrollPosY;
+	parentK.rotation.y = -23.2 + 30*scrollPosY;
 	parentK.position.z = initialpz +  4 * scrollPosY;
 	cubeK.position.y = cubeinity - 3.9 - 2.6 + 9*scrollPosY;
 
