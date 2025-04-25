@@ -871,6 +871,7 @@ const modelMove = () => {
 
     // Update the motion blur effect
     motionblur();
+    console.log(bee.rotation.y);
 
     // Update last scroll position
     lastScrollPos = window.scrollY;
