@@ -277,12 +277,12 @@ function cubes(cposY, text){
 // let textMesh11 = new THREE.Mesh();
 
 
-// // const cubeA = new cubes(-2, tex);
-// // const parentA = new parents(1);
+// // const cubeList[0] = new cubes(-2, tex);
+// // const parentList[0] = new parents(1);
 
 
-// // parentA.add(cubeA);
-// // scene.add(parentA);
+// // parentList[0].add(cubeList[0]);
+// // scene.add(parentList[0]);
 
 // // floadera.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('11:56 25 April 2015', {
@@ -300,7 +300,7 @@ function cubes(cposY, text){
 
 // // 	textMesh1.scale.y = 0
 
-// // 	cubeA.add(textMesh1);
+// // 	cubeList[0].add(textMesh1);
 
 // // 	THREE.Cache.clear();
 
@@ -308,11 +308,11 @@ function cubes(cposY, text){
 // // } );
 
 
-// // const cubeB = new cubes(-3.1, tex2);
-// // const parentB = new parents(2);
+// // const cubeList[1] = new cubes(-3.1, tex2);
+// // const parentList[1] = new parents(2);
 
-// // parentB.add(cubeB);
-// // scene.add(parentB);
+// // parentList[1].add(cubeList[1]);
+// // scene.add(parentList[1]);
 
 // // floaderb.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('The Earthquake from Above', {
@@ -330,17 +330,17 @@ function cubes(cposY, text){
 
 // // 	textMesh2.scale.y = 0
 
-// // 	cubeB.add(textMesh2);
+// // 	cubeList[1].add(textMesh2);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeC = new cubes(-4.2, tex3);
-// // const parentC = new parents(3);
+// // const cubeList[2] = new cubes(-4.2, tex3);
+// // const parentList[2] = new parents(3);
 
-// // parentC.add(cubeC);
-// // scene.add(parentC);
+// // parentList[2].add(cubeList[2]);
+// // scene.add(parentList[2]);
 
 // // floaderc.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('Langtang After 10 Years', {
@@ -358,17 +358,17 @@ function cubes(cposY, text){
 
 // // 	textMesh3.scale.y = 0
 
-// // 	cubeC.add(textMesh3);
+// // 	cubeList[2].add(textMesh3);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeD = new cubes(-5.3, tex4);
-// // const parentD = new parents(4);
+// // const cubeList[3] = new cubes(-5.3, tex4);
+// // const parentList[3] = new parents(4);
 
-// // parentD.add(cubeD);
-// // scene.add(parentD);
+// // parentList[3].add(cubeList[3]);
+// // scene.add(parentList[3]);
 
 // // floaderd.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('Bhaktapur 2.0', {
@@ -386,17 +386,17 @@ function cubes(cposY, text){
 
 // // 	textMesh4.scale.y = 0
 
-// // 	cubeD.add(textMesh4);
+// // 	cubeList[3].add(textMesh4);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeE = new cubes(-6.4, tex5);
-// // const parentE = new parents(5);
+// // const cubeList[4] = new cubes(-6.4, tex5);
+// // const parentList[4] = new parents(5);
 
-// // parentE.add(cubeE);
-// // scene.add(parentE);
+// // parentList[4].add(cubeList[4]);
+// // scene.add(parentList[4]);
 
 
 // // floadere.load('/earthquake/fonts/nueue.json', (nueue) => {
@@ -415,17 +415,17 @@ function cubes(cposY, text){
 
 // // 	textMesh5.scale.y = 0
 
-// // 	cubeE.add(textMesh5);
+// // 	cubeList[4].add(textMesh5);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeF = new cubes(-7.5, tex6);
-// // const parentF = new parents(6);
+// // const cubeList[5] = new cubes(-7.5, tex6);
+// // const parentList[5] = new parents(6);
 
-// // parentF.add(cubeF);
-// // scene.add(parentF);
+// // parentList[5].add(cubeList[5]);
+// // scene.add(parentList[5]);
 
 
 // // floaderf.load('/earthquake/fonts/nueue.json', (nueue) => {
@@ -444,17 +444,17 @@ function cubes(cposY, text){
 
 // // 	textMesh6.scale.y = 0
 
-// // 	cubeF.add(textMesh6);
+// // 	cubeList[5].add(textMesh6);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeG = new cubes(-8.6, tex7);
-// // const parentG = new parents(7);
+// // const cubeList[6] = new cubes(-8.6, tex7);
+// // const parentList[6] = new parents(7);
 
-// // parentG.add(cubeG);
-// // scene.add(parentG);
+// // parentList[6].add(cubeList[6]);
+// // scene.add(parentList[6]);
 
 
 // // floaderg.load('/earthquake/fonts/nueue.json', (nueue) => {
@@ -473,17 +473,17 @@ function cubes(cposY, text){
 
 // // 	textMesh7.scale.y = 0
 
-// // 	cubeG.add(textMesh7);
+// // 	cubeList[6].add(textMesh7);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
-// // const cubeH = new cubes(-9.7, tex8);
-// // const parentH = new parents(8);
+// // const cubeList[7] = new cubes(-9.7, tex8);
+// // const parentList[7] = new parents(8);
 
-// // parentH.add(cubeH);
-// // scene.add(parentH);
+// // parentList[7].add(cubeList[7]);
+// // scene.add(parentList[7]);
 
 
 // // floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
@@ -502,17 +502,17 @@ function cubes(cposY, text){
 
 // // 	textMesh8.scale.y = 0
 
-// // 	cubeH.add(textMesh8);
+// // 	cubeList[7].add(textMesh8);
 
 // // 	THREE.Cache.clear();
 
 // // } );
 
 // // const cubeI = new cubes(-10.8, tex9);
-// // const parentI = new parents(9);
+// // const parentList[8] = new parents(9);
 
-// // parentI.add(cubeI);
-// // scene.add(parentI);
+// // parentList[8].add(cubeI);
+// // scene.add(parentList[8]);
 
 
 // // floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
@@ -538,10 +538,10 @@ function cubes(cposY, text){
 // // } );
 
 // // const cubeJ = new cubes(-11.9, tex10);
-// // const parentJ = new parents(10);
+// // const parentList[9] = new parents(10);
 
-// // parentJ.add(cubeJ);
-// // scene.add(parentJ);
+// // parentList[9].add(cubeJ);
+// // scene.add(parentList[9]);
 
 // // floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('Editorial Journalism', {
@@ -567,10 +567,10 @@ function cubes(cposY, text){
 
 
 // // const cubeK = new cubes(-13, tex11);
-// // const parentK = new parents(11);
+// // const parentList[10] = new parents(11);
 
-// // parentK.add(cubeK);
-// // scene.add(parentK);
+// // parentList[10].add(cubeK);
+// // scene.add(parentList[10]);
 
 // // floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
 // // 	const geometry = new THREE.TextGeometry('Towering Monument to 2015', {
@@ -594,8 +594,8 @@ function cubes(cposY, text){
 
 // // } );
 
-// const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI, parentJ, parentK]
-// const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI, cubeJ, cubeK]
+// const parentList = [parentList[0], parentList[1], parentList[2], parentList[3], parentList[4], parentList[5], parentList[6], parentList[7], parentList[8], parentList[9], parentList[10]]
+// const cubeList = [cubeList[0], cubeList[1], cubeList[2], cubeList[3], cubeList[4], cubeList[5], cubeList[6], cubeList[7], cubeI, cubeJ, cubeK]
 // const textList = [textMesh1 ,textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11]
 
 const floader = new THREE.FontLoader();
@@ -757,7 +757,7 @@ const pmaterial = new THREE.PointsMaterial({
 
 const prtclMesh = new THREE.Points(particlesGeometry, pmaterial)
 
-parentA.add(prtclMesh)
+parentList[0].add(prtclMesh)
 
 const clock = new THREE.Clock();
 
@@ -789,49 +789,49 @@ const modelMove = () => {
 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
 	bee.position.z = initialPosition.z +  4 * scrollPosY;
 
-	parentA.rotation.y = -0.8 + 30*scrollPosY;
-	parentA.position.z = initialpz +  4 * scrollPosY;
-	cubeA.position.y = cubeinity  + 9.5*scrollPosY;
+	parentList[0].rotation.y = -0.8 + 30*scrollPosY;
+	parentList[0].position.z = initialpz +  4 * scrollPosY;
+	cubeList[0].position.y = cubeinity  + 9.5*scrollPosY;
 
-	parentB.rotation.y = -3 + 30*scrollPosY;
-	parentB.position.z = initialpz +  4 * scrollPosY;
-	cubeB.position.y = cubeinity - 0.65 + 9.5*scrollPosY;
+	parentList[1].rotation.y = -3 + 30*scrollPosY;
+	parentList[1].position.z = initialpz +  4 * scrollPosY;
+	cubeList[1].position.y = cubeinity - 0.65 + 9.5*scrollPosY;
 
-	parentC.rotation.y = -5.2 + 30*scrollPosY;
-	parentC.position.z = initialpz +  4 * scrollPosY;
-	cubeC.position.y = cubeinity - 1.3 + 9.5*scrollPosY;
+	parentList[2].rotation.y = -5.2 + 30*scrollPosY;
+	parentList[2].position.z = initialpz +  4 * scrollPosY;
+	cubeList[2].position.y = cubeinity - 1.3 + 9.5*scrollPosY;
 
-	parentD.rotation.y = -7.4 + 30*scrollPosY;
-	parentD.position.z = initialpz +  4 * scrollPosY;
-	cubeD.position.y = cubeinity - 1.3-0.65 + 9.5*scrollPosY;
+	parentList[3].rotation.y = -7.4 + 30*scrollPosY;
+	parentList[3].position.z = initialpz +  4 * scrollPosY;
+	cubeList[3].position.y = cubeinity - 1.3-0.65 + 9.5*scrollPosY;
 
-	parentE.rotation.y = -9.6 + 30*scrollPosY;
-	parentE.position.z = initialpz +  4 * scrollPosY;
-	cubeE.position.y = cubeinity - 2.6 + 9.5*scrollPosY;
+	parentList[4].rotation.y = -9.6 + 30*scrollPosY;
+	parentList[4].position.z = initialpz +  4 * scrollPosY;
+	cubeList[4].position.y = cubeinity - 2.6 + 9.5*scrollPosY;
 
-	parentF.rotation.y = -11.8 + 30*scrollPosY;
-	parentF.position.z = initialpz +  4 * scrollPosY;
-	cubeF.position.y = cubeinity - 2.6-0.65 + 9.5*scrollPosY;
+	parentList[5].rotation.y = -11.8 + 30*scrollPosY;
+	parentList[5].position.z = initialpz +  4 * scrollPosY;
+	cubeList[5].position.y = cubeinity - 2.6-0.65 + 9.5*scrollPosY;
 
-	parentG.rotation.y = -14 + 30*scrollPosY;
-	parentG.position.z = initialpz +  4 * scrollPosY;
-	cubeG.position.y = cubeinity - 3.9 + 9.5*scrollPosY;
+	parentList[6].rotation.y = -14 + 30*scrollPosY;
+	parentList[6].position.z = initialpz +  4 * scrollPosY;
+	cubeList[6].position.y = cubeinity - 3.9 + 9.5*scrollPosY;
 
-	parentH.rotation.y = -16.2 + 30*scrollPosY;
-	parentH.position.z = initialpz +  4 * scrollPosY;
-	cubeH.position.y = cubeinity - 3.9 -0.65 + 9.5*scrollPosY;
+	parentList[7].rotation.y = -16.2 + 30*scrollPosY;
+	parentList[7].position.z = initialpz +  4 * scrollPosY;
+	cubeList[7].position.y = cubeinity - 3.9 -0.65 + 9.5*scrollPosY;
 
-	parentI.rotation.y = -18.4 + 30*scrollPosY;
-	parentI.position.z = initialpz +  4 * scrollPosY;
-	cubeI.position.y = cubeinity - 3.9 -0.65 -0.65 + 9.5*scrollPosY;
+	parentList[8].rotation.y = -18.4 + 30*scrollPosY;
+	parentList[8].position.z = initialpz +  4 * scrollPosY;
+	cubeList[8].position.y = cubeinity - 3.9 -0.65 -0.65 + 9.5*scrollPosY;
 
-	parentJ.rotation.y = -20.6 + 30*scrollPosY;
-	parentJ.position.z = initialpz +  4 * scrollPosY;
-	cubeJ.position.y = cubeinity - 3.9 -1.3 - 0.65 + 9.5*scrollPosY;
+	parentList[9].rotation.y = -20.6 + 30*scrollPosY;
+	parentList[9].position.z = initialpz +  4 * scrollPosY;
+	cubeList[9].position.y = cubeinity - 3.9 -1.3 - 0.65 + 9.5*scrollPosY;
 
-	parentK.rotation.y = -22.8 + 30*scrollPosY;
-	parentK.position.z = initialpz +  4 * scrollPosY;
-	cubeK.position.y = cubeinity - 3.9 - 2.6 + 9.5*scrollPosY;
+	parentList[10].rotation.y = -22.8 + 30*scrollPosY;
+	parentList[10].position.z = initialpz +  4 * scrollPosY;
+	cubeList[10].position.y = cubeinity - 3.9 - 2.6 + 9.5*scrollPosY;
 
 
 	motionblur();
@@ -874,7 +874,7 @@ document.addEventListener("click", () => {
 		    } else {
 		    	vid.pause();
 		    	vid.currentTime = 10;
-		    	gsap.to(parentA.rotation, {y: currentParentPos, duration: 0.5});
+		    	gsap.to(parentList[0].rotation, {y: currentParentPos, duration: 0.5});
 		    	enableScroll();
 		    }
 
