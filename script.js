@@ -129,6 +129,15 @@ const tex9 = new THREE.TextureLoader().load(imgi.src, () =>{
 	THREE.Cache.clear();
 });
 
+const imgj = document.getElementById('imgj')
+const tex10 = new THREE.TextureLoader().load(imgj.src, () =>{
+	THREE.Cache.clear();
+});
+
+const imgk = document.getElementById('imgk')
+const tex11 = new THREE.TextureLoader().load(imgk.src, () =>{
+	THREE.Cache.clear();
+});
 
 const fall = document.getElementById("text");
 console.log(fall)
@@ -167,6 +176,14 @@ fall8.style.top = 0;
 const fall9 = document.getElementById("text9");
 fall9.style.display = "none";
 fall9.style.top = 0;
+
+const fall10 = document.getElementById("text10");
+fall10.style.display = "none";
+fall10.style.top = 0;
+
+const fall11 = document.getElementById("text11");
+fall11.style.display = "none";
+fall11.style.top = 0;
 
 vid.addEventListener('loadeddata', () => {
     vid.play();
@@ -252,6 +269,12 @@ let textMesh8 = new THREE.Mesh();
 
 const floaderi = new FontLoader();
 let textMesh9 = new THREE.Mesh();
+
+const floaderj = new FontLoader();
+let textMesh10 = new THREE.Mesh();
+
+const floaderk = new FontLoader();
+let textMesh11 = new THREE.Mesh();
 
 
 //const play1 = new playgeo();
@@ -497,7 +520,7 @@ floaderh.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 } );
 
-const cubeI = new cubes(-11.4, tex9);
+const cubeI = new cubes(-10.8, tex9);
 const parentI = new parents(9);
 
 parentI.add(cubeI);
@@ -524,10 +547,62 @@ floaderi.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 } );
 
+const cubeJ = new cubes(-11.9, tex10);
+const parentJ = new parents(10);
 
-const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI]
-const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI]
-const textList = [textMesh1, textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9];
+parentJ.add(cubeJ);
+scene.add(parentJ);
+
+floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
+	const geometry = new THREE.TextGeometry('Editorial Journalism', {
+		font: nueue,
+		size: 0.05,
+		height: 0.001,
+	});
+	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+	textMesh10.geometry = geometry
+	textMesh10.material = textMaterial
+	textMesh10.rotation.y = 1.65
+	textMesh10.position.x = 3
+	textMesh10.position.y = -0.65
+	textMesh10.position.z = 0.35
+
+	textMesh10.scale.y = 0
+
+	cubeI.add(textMesh10);
+
+} );
+
+
+const cubeK = new cubes(-11.4, tex11);
+const parentK = new parents(11);
+
+parentK.add(cubeK);
+scene.add(parentK);
+
+floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
+	const geometry = new THREE.TextGeometry('Towering Monument to 2015', {
+		font: nueue,
+		size: 0.05,
+		height: 0.001,
+	});
+	const textMaterial = new THREE.MeshBasicMaterial({color: 'black' });
+	textMesh11.geometry = geometry
+	textMesh11.material = textMaterial
+	textMesh11.rotation.y = 1.65
+	textMesh11.position.x = 3
+	textMesh11.position.y = -0.65
+	textMesh11.position.z = 0.35
+
+	textMesh11.scale.y = 0
+
+	cubeI.add(textMesh11);
+
+} );
+
+const parentList = [parentA, parentB, parentC, parentD, parentE, parentF, parentG, parentH, parentI, parentJ, parentK]
+const cubeList = [cubeA, cubeB, cubeC, cubeD, cubeE, cubeF, cubeG, cubeH, cubeI, cubeJ, cubeK]
+const textList = [textMesh1, textMesh2, textMesh3, textMesh4, textMesh5, textMesh6, textMesh7, textMesh8, textMesh9, textMesh10, textMesh11];
 let bigbox = 0;
 //console.log(textMesh)
 
@@ -536,7 +611,7 @@ function motionblur() {
 	for (var i = 0; i < 9; i++) {
 		if ((4.125 <= parentList[i].rotation.y && parentList[i].rotation.y <= 5.5)) {
 			bigbox = i;
-			if (vid.paused && fall.style.display == "none" && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none') {
+			if (vid.paused && fall.style.display == "none" && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' && fall10.style.display == 'none' && fall11.style.display == 'none') {
 				gsap.to(cubeList[i].scale, {y: 0.8, duration: 0.5})
 				gsap.to(cubeList[i].scale, {z: 1.3, duration: 0.5})
 				gsap.to(cubeList[i].rotation, {y: 0, duration: 0.5});
@@ -697,6 +772,14 @@ const modelMove = () => {
 	parentI.position.z = initialpz +  4 * scrollPosY;
 	cubeI.position.y = cubeinity - 3.9 -0.65 -0.65 + 9*scrollPosY;
 
+	parentJ.rotation.y = -21 + 30*scrollPosY;
+	parentJ.position.z = initialpz +  4 * scrollPosY;
+	cubeJ.position.y = cubeinity - 3.9 -1.3 - 0.65 + 9*scrollPosY;
+
+	parentK.rotation.y = -23.2 + 30*scrollPosY;
+	parentK.position.z = initialpz +  4 * scrollPosY;
+	cubeK.position.y = cubeinity - 3.9 - 2.6 + 9*scrollPosY;
+
 
 	motionblur();
 }
@@ -798,6 +881,18 @@ document.addEventListener("click", () => {
 				fall9.style.display = "flex";
 				fall9.style.transition = "opacity 0.5s"
 				disableScroll();
+			}else if ((bigbox == 9) && (fall10.style.display == "none")) {
+				gsap.to(parentList[bigbox].rotation, {y: 4.7, duration: 0.5});
+				fall10.style.top = window.scrollY.toString() + "px";
+				fall10.style.display = "flex";
+				fall10.style.transition = "opacity 0.5s"
+				disableScroll();
+			}else if ((bigbox == 10) && (fall11.style.display == "none")) {
+				gsap.to(parentList[bigbox].rotation, {y: 4.7, duration: 0.5});
+				fall11.style.top = window.scrollY.toString() + "px";
+				fall11.style.display = "flex";
+				fall11.style.transition = "opacity 0.5s"
+				disableScroll();
 			}else{
 				gsap.to(parentList[bigbox].rotation, {y: currentParentPos, duration: 0.5});
 				fall.style.display = "none";
@@ -809,6 +904,8 @@ document.addEventListener("click", () => {
 				fall7.style.display = "none";
 				fall8.style.display = "none";
 				fall9.style.display = "none";
+				fall10.style.display = "none";
+				fall11.style.display = "none";
 	
 				enableScroll();
 			}
@@ -821,7 +918,7 @@ document.addEventListener("click", () => {
 window.addEventListener('scroll', () => {
 	if (bee){
 		currentParentPos = parentList[bigbox].rotation.y;
-		if(vid.paused && fall.style.display == 'none' && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' ){
+		if(vid.paused && fall.style.display == 'none' && fall2.style.display == 'none' && fall3.style.display == 'none' && fall4.style.display == 'none' && fall5.style.display == 'none' && fall6.style.display == 'none' && fall7.style.display == 'none' && fall8.style.display == 'none' && fall9.style.display == 'none' && fall10.style.display == 'none' && fall11.style.display == 'none' ){
 			modelMove();
 		}
 		if ((window.scrollY > document.documentElement.scrollHeight - 1000) && (faded == false)) {

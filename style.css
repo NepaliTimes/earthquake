@@ -529,6 +529,102 @@ body {
     font-family: sans-serif;
 }
 
+
+#text10{
+    background: rgba(0, 0, 0, 0.45);
+    left: 48vw;
+/*    top: 75vh; /* or something like: top: calc(100vh - 30vh); */
+    bottom: unset;
+/*  margin: 70px;*/
+/*  padding: 20px;*/
+    position: absolute;
+    overflow: scroll;
+    height: 100vh;
+    width: 50vw;
+    z-index: 300;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50%;
+
+}
+
+#fall10{
+    font-size: 2vw;
+    position: sticky;
+    text-align: left;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+
+#Fallj{
+    padding: 20px;
+    font-size: 1vw;
+    position: sticky;
+    text-align: left;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+#fallauth10{
+    font-size: 1vw;
+    position: sticky;
+    text-align: right;
+    font-style: italic;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+#text11{
+    background: rgba(0, 0, 0, 0.45);
+    left: 48vw;
+/*    top: 75vh; /* or something like: top: calc(100vh - 30vh); */
+    bottom: unset;
+/*  margin: 70px;*/
+/*  padding: 20px;*/
+    position: absolute;
+    overflow: scroll;
+    height: 100vh;
+    width: 50vw;
+    z-index: 300;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50%;
+
+}
+
+#fall11{
+    font-size: 2vw;
+    position: sticky;
+    text-align: left;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+
+#Fallk{
+    padding: 20px;
+    font-size: 1vw;
+    position: sticky;
+    text-align: left;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+#fallauth11{
+    font-size: 1vw;
+    position: sticky;
+    text-align: right;
+    font-style: italic;
+    color: white;
+    font-family: sans-serif;
+}
+
 /*#beginning .title {
     color: #d1ff48;
     font-size: 11em;
