@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const vid = document.getElementById('vidA');
   const body = document.getElementById('welcome-body');
   let canClick = false;
-  const unlockTime = 35; // seconds
+  const unlockTime = 5; // seconds
 
   if (vid) {
     vid.muted = true;
@@ -109,13 +109,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     vid.load();
   }
-    if (window.innerWidth > 600) {
-      document.getElementById('welcome-body').addEventListener('click', () => {
+
+  if (window.innerWidth > 600) {
+    body.addEventListener('click', () => {
+      if (canClick && vid) {
+        vid.currentTime = 0; // Reset video time
         localStorage.setItem('enteredViaWelcome', 'true');
         window.location.href = 'page1.html';
-      });
-    }
-  });
+      }
+    });
+  }
+});
   </script>
 </body>
 </html>
