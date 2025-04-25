@@ -689,7 +689,7 @@ floader.load('/earthquake/fonts/nueue.json', (font) => {
 	}
 });
 
-const bigbox = 0;
+let bigbox = 0;
 
 function motionblur() {
 	for (var i = 0; i < 11; i++) {
@@ -767,30 +767,6 @@ keylight.position.set(0, 200, 0);
 scene.add(keylight);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-
-// const particlesGeometry = new THREE.BufferGeometry;
-// const prtcls = 5000;
-
-// const posArray = new Float32Array(prtcls*3);
-
-// for (let i = 0; i < prtcls*3; i++) {
-// 	posArray[i] = (Math.random() - 0.5)* (Math.random() *5)
-// }
-
-// particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
-
-// const pmaterial = new THREE.PointsMaterial({
-// 	size: 0.005,
-// 	color: 'gray',
-// 	transparent: true,
-// 	blending: THREE.AdditiveBlending
-// })
-
-// const prtclMesh = new THREE.Points(particlesGeometry, pmaterial)
-
-
-// console.log(parentList[0])
-// parentList[0].add(prtclMesh)
 
 const clock = new THREE.Clock();
 
