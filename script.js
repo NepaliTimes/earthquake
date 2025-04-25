@@ -569,7 +569,7 @@ floaderj.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	textMesh10.scale.y = 0
 
-	cubeI.add(textMesh10);
+	cubeJ.add(textMesh10);
 
 } );
 
@@ -596,7 +596,7 @@ floaderk.load('/earthquake/fonts/nueue.json', (nueue) => {
 
 	textMesh11.scale.y = 0
 
-	cubeI.add(textMesh11);
+	cubeK.add(textMesh11);
 
 } );
 
@@ -731,7 +731,7 @@ window.addEventListener('resize', () => {
 
 const modelMove = () => {
 	scrollPosY = (window.scrollY/document.body.clientHeight);
-	bee.rotation.y = initialRotation.y + -2 * Math.PI * scrollPosY;
+	bee.rotation.y = initialRotation.y + -1.8 * Math.PI * scrollPosY;
 	bee.rotation.x = initialRotation.x + (-0.5* scrollPosY);
 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
 	bee.position.z = initialPosition.z +  4 * scrollPosY;
