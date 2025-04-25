@@ -647,6 +647,9 @@ header .content-fit nav ul{
 
 
 @media (max-width: 600px) {
+    body{
+        background: black;
+    }
   .section .topic {
     display: none;
   }
