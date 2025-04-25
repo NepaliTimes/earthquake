@@ -792,60 +792,93 @@ window.addEventListener('resize', () => {
 });
 
 
-const modelMove = _.debounce(() => {
-  scrollPosY = (window.scrollY/document.body.clientHeight);
-	bee.rotation.y = initialRotation.y + -1.8 * Math.PI * scrollPosY;
-	bee.rotation.x = initialRotation.x + (-0.5* scrollPosY);
-	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
-	bee.position.z = initialPosition.z +  4 * scrollPosY;
+// const modelMove = _.debounce(() => {
+//   scrollPosY = (window.scrollY/document.body.clientHeight);
+// 	bee.rotation.y = initialRotation.y + -1.8 * Math.PI * scrollPosY;
+// 	bee.rotation.x = initialRotation.x + (-0.5* scrollPosY);
+// 	bee.position.y = initialPosition.y + -0.1 * scrollPosY;
+// 	bee.position.z = initialPosition.z +  4 * scrollPosY;
 
-	parentList[0].rotation.y = -0.8 + 30*scrollPosY;
-	parentList[0].position.z = initialpz +  4 * scrollPosY;
-	cubeList[0].position.y = cubeinity  + 9.5*scrollPosY;
+// 	parentList[0].rotation.y = -0.8 + 30*scrollPosY;
+// 	parentList[0].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[0].position.y = cubeinity  + 9.5*scrollPosY;
 
-	parentList[1].rotation.y = -3 + 30*scrollPosY;
-	parentList[1].position.z = initialpz +  4 * scrollPosY;
-	cubeList[1].position.y = cubeinity - 0.65 + 9.5*scrollPosY;
+// 	parentList[1].rotation.y = -3 + 30*scrollPosY;
+// 	parentList[1].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[1].position.y = cubeinity - 0.65 + 9.5*scrollPosY;
 
-	parentList[2].rotation.y = -5.2 + 30*scrollPosY;
-	parentList[2].position.z = initialpz +  4 * scrollPosY;
-	cubeList[2].position.y = cubeinity - 1.3 + 9.5*scrollPosY;
+// 	parentList[2].rotation.y = -5.2 + 30*scrollPosY;
+// 	parentList[2].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[2].position.y = cubeinity - 1.3 + 9.5*scrollPosY;
 
-	parentList[3].rotation.y = -7.4 + 30*scrollPosY;
-	parentList[3].position.z = initialpz +  4 * scrollPosY;
-	cubeList[3].position.y = cubeinity - 1.3-0.65 + 9.5*scrollPosY;
+// 	parentList[3].rotation.y = -7.4 + 30*scrollPosY;
+// 	parentList[3].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[3].position.y = cubeinity - 1.3-0.65 + 9.5*scrollPosY;
 
-	parentList[4].rotation.y = -9.6 + 30*scrollPosY;
-	parentList[4].position.z = initialpz +  4 * scrollPosY;
-	cubeList[4].position.y = cubeinity - 2.6 + 9.5*scrollPosY;
+// 	parentList[4].rotation.y = -9.6 + 30*scrollPosY;
+// 	parentList[4].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[4].position.y = cubeinity - 2.6 + 9.5*scrollPosY;
 
-	parentList[5].rotation.y = -11.8 + 30*scrollPosY;
-	parentList[5].position.z = initialpz +  4 * scrollPosY;
-	cubeList[5].position.y = cubeinity - 2.6-0.65 + 9.5*scrollPosY;
+// 	parentList[5].rotation.y = -11.8 + 30*scrollPosY;
+// 	parentList[5].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[5].position.y = cubeinity - 2.6-0.65 + 9.5*scrollPosY;
 
-	parentList[6].rotation.y = -14 + 30*scrollPosY;
-	parentList[6].position.z = initialpz +  4 * scrollPosY;
-	cubeList[6].position.y = cubeinity - 3.9 + 9.5*scrollPosY;
+// 	parentList[6].rotation.y = -14 + 30*scrollPosY;
+// 	parentList[6].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[6].position.y = cubeinity - 3.9 + 9.5*scrollPosY;
 
-	parentList[7].rotation.y = -16.2 + 30*scrollPosY;
-	parentList[7].position.z = initialpz +  4 * scrollPosY;
-	cubeList[7].position.y = cubeinity - 3.9 -0.65 + 9.5*scrollPosY;
+// 	parentList[7].rotation.y = -16.2 + 30*scrollPosY;
+// 	parentList[7].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[7].position.y = cubeinity - 3.9 -0.65 + 9.5*scrollPosY;
 
-	parentList[8].rotation.y = -18.4 + 30*scrollPosY;
-	parentList[8].position.z = initialpz +  4 * scrollPosY;
-	cubeList[8].position.y = cubeinity - 3.9 -0.65 -0.65 + 9.5*scrollPosY;
+// 	parentList[8].rotation.y = -18.4 + 30*scrollPosY;
+// 	parentList[8].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[8].position.y = cubeinity - 3.9 -0.65 -0.65 + 9.5*scrollPosY;
 
-	parentList[9].rotation.y = -20.6 + 30*scrollPosY;
-	parentList[9].position.z = initialpz +  4 * scrollPosY;
-	cubeList[9].position.y = cubeinity - 3.9 -1.3 - 0.65 + 9.5*scrollPosY;
+// 	parentList[9].rotation.y = -20.6 + 30*scrollPosY;
+// 	parentList[9].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[9].position.y = cubeinity - 3.9 -1.3 - 0.65 + 9.5*scrollPosY;
 
-	parentList[10].rotation.y = -22.8 + 30*scrollPosY;
-	parentList[10].position.z = initialpz +  4 * scrollPosY;
-	cubeList[10].position.y = cubeinity - 3.9 - 2.6 + 9.5*scrollPosY;
+// 	parentList[10].rotation.y = -22.8 + 30*scrollPosY;
+// 	parentList[10].position.z = initialpz +  4 * scrollPosY;
+// 	cubeList[10].position.y = cubeinity - 3.9 - 2.6 + 9.5*scrollPosY;
 
 
-	motionblur();
-}, 100); 
+// 	motionblur();
+// }, 100); 
+
+let lastScrollPos = 0;
+
+const modelMove = () => {
+  // Only update when the scroll position changes
+  if (Math.abs(window.scrollY - lastScrollPos) > 1) {
+    scrollPosY = window.scrollY / document.body.clientHeight;
+
+    // Update the bee rotation and position
+    bee.rotation.y = initialRotation.y + -1.8 * Math.PI * scrollPosY;
+    bee.rotation.x = initialRotation.x + (-0.5 * scrollPosY);
+    bee.position.y = initialPosition.y + -0.1 * scrollPosY;
+    bee.position.z = initialPosition.z + 4 * scrollPosY;
+
+    // Loop through the parentList and cubeList, updating rotations and positions
+    for (let i = 0; i < parentList.length; i++) {
+      let offsetY = i * 1.2; // Adjust this based on your needs
+
+      parentList[i].rotation.y = -0.8 * (i + 1) + 30 * scrollPosY;
+      parentList[i].position.z = initialpz + 4 * scrollPosY;
+      cubeList[i].position.y = cubeinity + offsetY + 9.5 * scrollPosY;
+    }
+
+    // Update the motion blur effect
+    motionblur();
+
+    // Update last scroll position
+    lastScrollPos = window.scrollY;
+  }
+
+  // Request the next frame for smooth animation
+  requestAnimationFrame(modelMove);
+};
 	
 
 
