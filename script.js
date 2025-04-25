@@ -632,7 +632,7 @@ const titles = [
 	'Loss of Soul and Soil',
 	'Structural Problems',
 	'Yes, Quakes can be Forecast',
-	'Editorial Journalism',
+	'Disaster Journalism',
 	'Towering Monument to 2015'
 ];
 
