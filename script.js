@@ -845,6 +845,7 @@ const modelMove = _.throttle(() => {
 
 
 	motionblur();
+	console.log(bee.rotation.y);
 }, 20); 
 
 // let lastScrollPos = 0;
