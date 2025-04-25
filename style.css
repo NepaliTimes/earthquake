@@ -647,6 +647,7 @@ header .content-fit nav ul{
 
 #mobile-message {
       display: none;
+      color: black;
       position: fixed;
       bottom: 10vh;
       left: 50%;
