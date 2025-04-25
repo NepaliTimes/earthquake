@@ -578,9 +578,9 @@ loader.load('/earthquake/assetA.glb',
 		bee.position.y = initialPosition.y;
 		bee.rotation.y = initialRotation.y;
 		bee.rotation.x = initialRotation.x;
-		bee.scale.y = 0.08;
-		bee.scale.x = 0.08;
-		bee.scale.z = 0.08;
+		bee.scale.y = 0.04;
+		bee.scale.x = 0.04;
+		bee.scale.z = 0.04;
 
 		scene.add(bee);
 		THREE.Cache.clear();
@@ -596,10 +596,10 @@ const obj = document.getElementById('container3d').appendChild(renderer.domEleme
 
 
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+const ambientLight = new THREE.AmbientLight(0xffffff, 4);
 scene.add(ambientLight);
 
-const topLight = new THREE.DirectionalLight(0x87CEFA, 8);
+const topLight = new THREE.DirectionalLight(0x87CEFA, 5);
 topLight.position.set(20, 500, 0);
 scene.add(topLight);
 
