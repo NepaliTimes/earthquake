@@ -630,34 +630,39 @@ const textures = [
 ];
 
 floader.load('/earthquake/fonts/nueue.json', (font) => {
-	for (let i = 0; i < titles.length; i++) {
-		const cube = new cubes(xPositions[i], textures[i]);
-		const parent = new parents(i + 1);
-		parent.add(cube);
-		scene.add(parent);
+	try
+		{
+			for (let i = 0; i < titles.length; i++) {
+			const cube = new cubes(xPositions[i], textures[i]);
+			const parent = new parents(i + 1);
+			parent.add(cube);
+			scene.add(parent);
 
-		cubeList.push(cube);
-		parentList.push(parent);
+			cubeList.push(cube);
+			parentList.push(parent);
 
-		console.log('Cube:', cube)
-		console.log('parent:', parent)
+			console.log('Cube:', cube)
+			console.log('parent:', parent)
 
-		const geometry = new THREE.TextGeometry(titles[i], {
-			font: font,
-			size: 0.05,
-			height: 0.001,
-		});
-		geometry.computeBoundingBox();
-		const textWidth = geometry.boundingBox.max.x - geometry.boundingBox.min.x;
+			const geometry = new THREE.TextGeometry(titles[i], {
+				font: font,
+				size: 0.05,
+				height: 0.001,
+			});
+			geometry.computeBoundingBox();
+			const textWidth = geometry.boundingBox.max.x - geometry.boundingBox.min.x;
 
-		const material = new THREE.MeshBasicMaterial({ color: 'black' });
-		const mesh = new THREE.Mesh(geometry, material);
-		mesh.rotation.y = 1.65;
-		mesh.position.set(3 - textWidth / 2, -0.65, zPositions[i]);
-		mesh.scale.y = 0;
+			const material = new THREE.MeshBasicMaterial({ color: 'black' });
+			const mesh = new THREE.Mesh(geometry, material);
+			mesh.rotation.y = 1.65;
+			mesh.position.set(3 - textWidth / 2, -0.65, zPositions[i]);
+			mesh.scale.y = 0;
 
-		cube.add(mesh);
-		textList.push(mesh);
+			cube.add(mesh);
+			textList.push(mesh);
+		}
+	}catch (err) {
+		console.error('💥 Error in font loader loop:', err);
 	}
 });
 
